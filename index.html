@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page | Milden Adventures</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/test2.css">
+   <link rel="stylesheet" href="css/test3.css">
+   <link rel="stylesheet" href="main.css">
+   <link rel="stylesheet" href="main2.css">
+   <link rel="stylesheet" href="css/new.css">
+ <style>
+    
+     .container1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 600px) {
+        .dropdown-menu{
+                position: none;
+                width: 98%;
+                background-color: #a56b3a;
+                display: grid;
+                margin-left: 1%;
+                margin-right: 1%;
+        }
+        .dropdown-item{
+            height: 45px;
+        }
+        }
+ </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container1 navbar">
+
+            <a href="#" class="logo">
+                <img src="logo2.png" alt="logo image" style="width: 100px; height: 70px; margin-left: 10px;">
+                <span>Milden Adventures</span>
+            </a>
+                            <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            <ul class="nav-links">
+                <li><a href="#" data-i18n="header.nav1">Home</a></li>
+                <li><a href="destinations.html" data-i18n="header.nav2">Destinations</a></li>
+                
+                <li><a href="aboutus.html" data-i18n="header.nav5">About</a></li>
+                <li><a href="contacts.html" data-i18n="header.nav6">Contact</a></li>
+                <!--<li><div id="google_translate_element"></div></li>-->
+               <li>
+                <div class="header-actions">
+                    
+                    
+                    <div class="language-dropdown" id="languageDropdown">
+                    <div class="dropdown-toggle" id="dropdownToggle">
+                        <div class="language-flag" id="currentFlag" style="background-image: url('https://flagcdn.com/w40/gb.png');"></div>
+                        <span id="currentLanguage">English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item" data-lang="en">
+                            <div class="language-flag" style="background-image: url('https://flagcdn.com/w40/gb.png');"></div>
+                            <span>English</span>
+                        </div>
+                        <div class="dropdown-item" data-lang="cn">
+                            <div class="language-flag" style="background-image: url('https://flagcdn.com/w40/cn.png');"></div>
+                            <span>Mandarin</span>
+                        </div>
+                        <div class="dropdown-item" data-lang="fr">
+                            <div class="language-flag" style="background-image: url('https://flagcdn.com/w40/fr.png');"></div>
+                            <span>French</span>
+                        </div>
+                        <div class="dropdown-item" data-lang="sa">
+                            <div class="language-flag" style="background-image: url('https://flagcdn.com/w40/sa.png');"></div>
+                            <span>Arabic</span>
+                        </div>
+                        <div class="dropdown-item" data-lang="de">
+                            <div class="language-flag" style="background-image: url('https://flagcdn.com/w40/de.png');"></div>
+                            <span>German</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+               </li>
+            </ul>
+             
+            
+            
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="opening_header">Discover Our Story</h1>
+            <p data-i18n="opening1">At Milden Adventures, we craft unforgettable journeys that connect you with the world's most breathtaking destinations. With over a decade of expertise, we transform travel dreams into reality.</p>
+            <div class="hero-buttons">
+                <a class="cta-button" id="quoteBtn" data-i18n="re.bok" style="cursor: pointer;">Request quote</a>
+                <a class="cta-button" id="openModal" data-i18n="bookk" style="cursor: pointer;" onclick="showPopup()">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- section code  -->
+    <section>
+        <div class="container">
+        
+        <section class="section-header" style="
+            text-align: center;
+            padding: 30px 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            ">
+            <h2 style="
+             font-size: 2.5rem;
+            margin-bottom: 10px;
+            ">Featured Destinations</h2>
+            <p
+            style="
+            font-size: 1.2rem;
+            opacity: 0.9;"
+            data-i18n="intro.23"
+            >Explore Kenya's diverse landscapes from pristine beaches to majestic wildlife reserves</p>
+        </section>
+        
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all" data-i18n="destination">All Destinations</button>
+            <button class="filter-btn" data-filter="beach" data-i18n="beach">Beaches</button>
+            <button class="filter-btn" data-filter="safari" data-i18n="safari">Safari</button>
+            <button class="filter-btn" data-filter="luxury" data-i18n="luxury">Luxury</button>
+            <button class="filter-btn" data-filter="mountain" data-i18n="mountain">Mountains</button>
+        </div>
+        
+        <div class="cards-container">
+            <!-- Beach Card -->
+            <div class="destination-card" data-category="beach" >
+                <div class="card-image">
+                    <img src="images/tokyo.jpg" alt="tokyo" loading="lazy">
+                    <div class="price-tag">From $2,200</div>
+                   
+                </div>
+                <div class="card-body">
+                    <h3><a href="#">Asia (Japan) Experience</a></h3>
+                    <p data-i18n="tour.japan">Discover Japan’s futuristic cities, serene temples, and timeless traditions in every corner.
+Savor authentic sushi, tea ceremonies, and the vibrant flavors of Osaka street food.
+From Tokyo’s neon lights to Kyoto’s quiet shrines, it’s a journey of contrast and wonder..</p>
+                    <div class="card-footer">
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Tokyo, Japan</span>
+                        </div>
+                        <button class="btn">Explore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Safari Card -->
+            <div class="destination-card" data-category="luxury">
+                <div class="card-image">
+                    <img src="images/taj.jpg" alt="Agra – Taj Mahal" loading="lazy">
+                    <div class="price-tag">From $890</div>
+                   
+                </div>
+                <div class="card-body">
+                    <h3><a href="#">South Asia (India)</a></h3>
+                    <p data-i18n="tour.asia">Experience South Asia’s vibrant heart through India’s colorful festivals, majestic palaces, and sacred rivers.
+Indulge in aromatic spices, flavorful curries, and the warmth of local hospitality.
+From the Taj Mahal’s grandeur to Kerala’s calm backwaters, every moment is a cultural feast.</p>
+                    <div class="card-footer">
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>India</span>
+                        </div>
+                        <button class="btn">Explore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Safari Card -->
+            <div class="destination-card" data-category="beach">
+                <div class="card-image">
+                    <img src="images/niagra.jpg" alt="Niagara Falls" loading="lazy">
+                    <div class="price-tag">From $2,400</div>
+                </div>
+                <div class="card-body">
+                    <h3><a href="#">North America (USA)</a></h3>
+                    <p data-i18n="tour.america">Explore the USA’s East Coast with iconic landmarks, historic cities, and scenic coastlines.
+Savor New York’s fast-paced energy, Boston’s colonial charm, and Washington D.C.’s monuments.
+From bustling streets to quiet harbors, it’s a journey through the roots of American heritage.</p>
+                    <div class="card-footer">
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>North America, USA</span>
+                        </div>
+                        <button class="btn">Explore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Luxury Card -->
+            <div class="destination-card" data-category="mountain">
+                <div class="card-image">
+                    <img src="images/peru.jpg" alt="Angama Mara" loading="lazy">
+                    <div class="price-tag">From $2,300</div>
+                </div>
+                <div class="card-body">
+                    <h3><a href="#">Peru</a></h3>
+                    <p data-i18n="tour.peru">Uncover Peru’s ancient wonders, vibrant markets, and breathtaking Andean landscapes.
+Savor traditional dishes like ceviche and explore rich Incan heritage in every step.
+From the mystical ruins of Machu Picchu to the colorful streets of Cusco, adventure awaits.</p>
+                    <div class="card-footer">
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>South America, peru</span>
+                        </div>
+                        <button class="btn">Explore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Safari Card -->
+            <div class="destination-card" data-category="safari luxury">
+                <div class="card-image">
+                    <img src="images/kenya.jpg" alt="Big five" loading="lazy">
+                    <div class="price-tag">From $1,480</div>
+                </div>
+                <div class="card-body">
+                    <h3><a href="#">Mara Bushtops</a></h3>
+                    <p data-i18n="tour.mara">Embark on Kenya’s classic safari adventure through the savannahs of Maasai Mara and Lake Naivasha.
+Witness the Big Five, vibrant tribal culture, and golden sunsets over the plains.
+Unwind on Diani’s pristine beaches, where turquoise waters meet Swahili charm.</p>
+                    <div class="card-footer">
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Masai Mara, Kenya</span>
+                        </div>
+                        <button class="btn">Explore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Luxury Card -->
+            <div class="destination-card" data-category="mountain safari">
+                <div class="card-image">
+                    <img src="images/cape.jpg" alt="south africa" loading="lazy">
+                    <div class="price-tag">From $1,950</div>
+                </div>
+                <div class="card-body">
+                    <h3><a href="#">South Africa</a></h3>
+                    <p data-i18n="tour.africa">Journey through South Africa from the vibrant streets of Cape Town to the wilds of Kruger National Park.
+Savor world-class wines, dramatic coastlines, and thrilling Big Five safaris.
+From Table Mountain to untamed savannahs, it’s a land of contrast and unforgettable beauty.</p>
+                    <div class="card-footer">
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Cape town, South africa</span>
+                        </div>
+                        <button class="btn">Explore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mountain Card -->
+            <div class="destination-card" data-category="mountain">
+                <div class="card-image">
+                    <img src="images/egypt.jpg" alt="Egypt" loading="lazy">
+                    <div class="price-tag">From $1,350</div>
+                </div>
+                <div class="card-body">
+                    <h3><a href="#">Nile Treasures – 7 Days</a></h3>
+                    <p data-i18n="tour.egypt">Uncover Egypt’s ancient wonders with a journey along the timeless Nile River.
+Marvel at the pyramids of Giza, grand temples of Luxor, and royal tombs of the Valley of the Kings.
+From bustling Cairo to serene felucca cruises, Egypt is a land of myth and majesty.</p>
+                    <div class="card-footer">
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Egypt </span>
+                        </div>
+                        <button class="btn">Explore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Beach Card -->
+            <div class="destination-card" data-category="safari">
+                <div class="card-image">
+                    <img src="images/uganda.jpg" alt="Lamu Island" loading="lazy">
+                    <div class="price-tag">From $2,100</div>
+                </div>
+                <div class="card-body">
+                    <h3><a href="#">Gorilla Trekking & Nile Cruise</a></h3>
+                    <p data-i18n="tour.uganda">Venture into Uganda’s lush jungles for an unforgettable gorilla trekking experience in Bwindi.
+Feel the thrill of close encounters with mountain gorillas and diverse wildlife.
+Unwind with a scenic Nile cruise in Murchison Falls, where adventure meets tranquility.</p>
+                    <div class="card-footer">
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Uganda</span>
+                        </div>
+                        <button class="btn">Explore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card" data-category="luxury">
+                <div class="card-image">
+                    <img src="images/dubai.jpg" alt="dubai" loading="lazy">
+                    <div class="price-tag">From $970 </div>
+                </div>
+                <div class="card-body">
+                    <h3><a href="#">Iconic Dubai & Abu Dhabi</a></h3>
+                    <p data-i18n="tour.dubai">Experience the UAE’s dazzling blend of modern luxury and cultural heritage in Dubai and Abu Dhabi.
+Marvel at futuristic skyscrapers, golden deserts, and the opulence of the Sheikh Zayed Grand Mosque.
+From thrilling dune adventures to world-class shopping, it’s a journey of pure indulgence.</p>
+                    <div class="card-footer">
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Dubai</span>
+                        </div>
+                        <button class="btn">Explore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card" data-category="beach luxury">
+                <div class="card-image">
+                    <img src="images/jordan.jpg" alt="jordan" loading="lazy">
+                    <div class="price-tag">From $1,190</div>
+                </div>
+                <div class="card-body">
+                    <h3><a href="#">Petra & Wadi Rum Magic</a></h3>
+                    <p data-i18n="tour.jordan">Step into Jordan’s timeless beauty with the rose-red city of Petra and the surreal landscapes of Wadi Rum.
+Wander through ancient canyons, stargaze in desert camps, and float in the Dead Sea’s healing waters.
+From historic marvels to Bedouin hospitality, every moment is steeped in wonder and warmth.</p>
+                    <div class="card-footer">
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jordan</span>
+                        </div>
+                        <button class="btn">Explore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-card" data-category="luxury">
+                <div class="card-image">
+                    <img src="images/tower.jpg" alt="Europe" loading="lazy">
+                    <div class="price-tag">From $2,950</div>
+                </div>
+                <div class="card-body">
+                    <h3><a href="#">Grand Tour </a></h3>
+                    <p data-i18n="tour.Europe">Embark on a 12-day Grand Tour through Europe’s most enchanting destinations across France, Italy, and Switzerland.
+Admire the Eiffel Tower’s glow in Paris, explore Rome’s ancient Colosseum, and cruise Venice’s romantic canals.
+Marvel at the majestic Swiss Alps in Lucerne and Zurich—where elegance meets alpine adventure.</p>
+                    <div class="card-footer">
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Europe</span>
+                        </div>
+                        <button class="btn">Explore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    </section>
+
+       
+
+    
+    <!-- Categories -->
+    <section class="container">
+        <h2 class="section-title" data-i18n="safari.titles">Travel Experiences</h2>
+        <div class="categories">
+            <div class="category">
+                <i class="fas fa-lion"></i>
+                <h3 data-i18n="safari.h">Safari Adventures</h3>
+                <p data-i18n="safari.b">Get up close with Africa's majestic wildlife in their natural habitats.</p>
+            </div>
+            
+            <div class="category">
+                <i class="fas fa-umbrella-beach"></i>
+                <h3 data-i18n="category.h">Beach Escapes</h3>
+                <p data-i18n="category.b">Relax on pristine beaches with crystal-clear waters and luxury resorts.</p>
+            </div>
+            
+            <div class="category">
+                <i class="fas fa-hiking"></i>
+                <h3 data-i18n="category.h1">Nature Treks</h3>
+                <p data-i18n="category.h2">Explore diverse landscapes from savannahs to mountains and forests.</p>
+            </div>
+            
+            <div class="category">
+                <i class="fas fa-hotel"></i>
+                <h3 data-i18n="category.h3">Luxury Lodges</h3>
+                <p data-i18n="category.h4">Stay in exquisite accommodations blending comfort with wilderness.</p>
+            </div>
+        </div>
+    </section>
+    	<div class="beno">
+					<p class="choose_us">
+						<h1 class="us" data-i18n="choice.h">Why Choose us:</h1>
+				<li type="none" class="subjects">
+				<p class="our_text" data-i18n="choice.1">We listen to our clients objectives and aspirations and therefore provide customized Holiday destinations.
+				We are innovative and passionate about the work we do. We always come up with new ways to enrich your Safari and Holiday with us. 
+				 High Quality services: We have a supreme team who work rigorously to ensure your Holiday experiences supercedes your. expectations.
+				    We always deliver on time: We genuinely understand the value of time in business and hence adhere to time and deliver all projects on time to our customers.
+				</p>
+				</li>
+				</p>
+				<h1 class="aff" style="font-family: fantasy;" data-i18n="choice.2">Our Affliattes & Memberships</h1>
+    <div class="aff_img">
+        <img src="images/aff1 (1).png" alt="" loading="lazy" class="imga" title="Responsible Tourism"><img src="images/aff1 (2).png" alt="" loading="lazy" class="imga" title="CERTIFIED Ecotourim"><img src="images/aff1 (3).png" loading="lazy" alt="" class="imga" title="Magical Kenya"><img src="images/aff1 (4).png" alt="" loading="lazy" class="imga" title="WE PRACTISE SUSTAINABLE TOURISM">
+    </div>
+					</div>
+                    <div class="reviews">
+
+                    <h1 class="say" data-i18n="review"> What our customers say:</h1>
+                    	 <div class="slideshow-container">
+					<div id="displayDiv4" class="display-div slide-in">
+						<div class="cus_textsss">
+							<p class="txts">
+						 <strong data-i18n="review.1">
+							"Our family of 10 traveled to Tsavo National park the 2024 holidays and the trip was wonderful! Dennis and Milcah helped set up all details and everything worked like clockwork. Airfare from multiple cities, transfers, multiple hotel rooms, COVID testing protocols - everything was perfect. The White sands was a beautiful and accommodating all-inclusive for our large and diverse group. The staff there and the workers on our excursions were all friendly and helpful. I think they are so happy to have tourists back! Not going to cancel a trip that took a year to plan! Our trip occurred without a hitch and now we have lifetime memories of our time together. We are already planning our next adventure!"
+				<a> - Alexa T.</a>
+						</strong>       
+							</p>
+						   
+						</div>
+					
+				  </div>
+        <div id="displayDiv1" class="display-div slide-out">
+            <div class="cus_textsss">
+                <p class="txts">
+             <strong data-i18n="review.2">
+                "Just wanted to let you know that the trip was fantastic and everything worked out seamlessly! The hotels and the tours you recommended were excellent! Hotel locations in particular were ideal. Milcah came through as promised with the Safari drives planned im advance, and that experience was very special for us. Also, the Trip Plan made things very easy for us. It was nice that we could all check out the scheduled daily plan."
+    <a>- Clark Costello.</a>
+			</strong>       
+                </p>
+               
+            </div>
+      </div>
+
+
+    
+     
+      <div id="displayDiv3" class="display-div slide-out">
+            <div class="cus_textsss">
+                <p class="txts">
+             <strong data-i18n="review.3">
+    We are back from Dubai and wanted to send you a sincere thank you for helping us organize our trip.  It was indeed the trip of a lifetime and we are so grateful and appreciative of the work you did to help make it so magical.  
+     
+    As a couple of people who have spent years travelling independently, booking things on our own and improvising to solve problems along the way,  I now see the incredible impact of an experienced and professional travel agent can have on a trip.    We could not have been more pleased with the outcome for our special 25th Anniversary trip to Dubai.  You were bang on with many of the choices and recommendations you made to us.
+     
+    I'll try to pop in and thank you in person, but thought I'd get this note and picture off to you while I had a moment. 
+    <a>Warmest regards,
+        Katherine  and Jordan Kimaku.</a>
+</strong>       
+                </p>
+               
+            </div>
+      </div>
+	  <div id="displayDiv2" class="display-div slide-out"> 
+		<div class="cus_textsss">
+			<p class="txts" >
+				<strong data-i18n="review.10">
+				Wow, wow, wow! Am I gushing too much about how awesome Milcah and the team are.  2 for 2 amazing experiences. Life is short; get on with once in a life time experiences. Milden Travel is the best Luxury Travel Agency I have ever used. If you are looking for epic stays in the worlds most beautiful places - Milcah and the team are very knowledgable and their affiliations and personal connections will ensure you receive distinguished greetings, service, recognition and maybe even some gifts!
+
+We have used Milcah for our stays in Kenya and East Africa at Large.
+
+Oh, did I mention that they were able to get us rates lower than Expedia!!!
+</strong>
+<p class="username">-Mike</p>
+			</p>
+		   
+		</div>
+  </div>
+
+      
+      <div id="displayDiv5" class="display-div slide-out">
+         
+            <div class="cus_textsss">
+                
+                <p class="txts">
+                    <strong data-i18n="review.4">
+                    Thank You Milcah 
+                    Just home from the wonderful trip you recommended to Maldives with Linda SIm and David Talek. Not only was the trip mind blowing in it’s selection of gardens, hotels, meals ....oh the meals!...but the group was collaborative and most interesting being mainly from areas close to us.  The highlight from a general perspective was the guides they are super stars and made everyone’s wishes happen with their delightful professional yet warm character.  Thank you for suggesting this for us....truly a trip to be remembered for all the good reasons.
+                    
+                    We look forward to working with Milcah you for our next adventure!
+                    
+                    Cheers 
+                </strong>
+                    <a class="username">-Betty</a>               
+                </p>
+            </div>
+       
+      </div>
+    
+      <div id="displayDiv6" class="display-div slide-out"> 
+            <div class="cus_textss">
+                
+                <p class="txts"><strong data-i18n="review.5">
+                    Hey Milcah and Dennis 
+                    
+                    Thanks for following up!
+                    
+                    Honestly Kenya far exceeded our expectations, what a beautiful Country with beautiful people. We have truly fallen in love with it and can’t wait to go back one day…maybe more Safari and adventure holiday!
+                    
+                    We are very happy and satisfied with how you and your team  helped us build our dream holiday.
+                    
+                    Thank you for everything !
+                </strong>
+                <a class="username">-JW.</a> 
+                    
+                </p>
+            </div>
+      </div>
+    
+      <div id="displayDiv7" class="display-div slide-out">
+         
+            <div class="cus_textss">
+    
+                <p class="txts"><strong data-i18n="review.6">
+                    Milcah is great to work with! She has helped with numerous travel occasions. She responds very promptly to requests and has helped to make wonderful vacation plans for my family and I
+                </strong>
+                <a class="username">-Tiffany H.</a>
+                </p>
+            </div>
+    
+      </div>
+    
+      <div id="displayDiv8" class="display-div slide-out">
+         
+        <div class="cus_textss">
+
+            <p class="txts"><strong data-i18n="review.7">
+                Booking through you was very easy and made our lives so much easier. I have nothing bad to say! Thank you for giving us tips and guidance before we left on what to bring and such, that was very helpful! Thanks again
+            </strong> <a class="username">-Stephanie Wallace</a>
+            </p>
+        </div>
+
+      </div>
+    
+      <div id="displayDiv9" class="display-div slide-out">
+        
+            <div class="cus_textss">
+                
+                <p class="txts"><strong data-i18n="review.8">
+                    "You did a fabulous job. There were no hitches. Thank you again for all your work planning this trip."</strong>
+             <a class="username"> -Carl E.</a>
+                </p>
+            </div>
+        
+      </div>
+    
+      <div id="displayDiv10" class="display-div slide-out">
+     
+            <div class="cus_textss">
+                
+                <p class="txts"><strong data-i18n="review.9">“Milcah was great with the entire process from planning to updates during the trip. We had 11 people and everything was perfectly executed. We appreciate all of her hard work. It was truly the trip of a lifetime. Thank you!” </strong>
+    
+                    <a class="username">-Katrina S.</a>
+                </p>
+            </div>
+      </div>
+    </div>
+    <div class="rate_uss">
+        <h1 data-i18n="review.rate">write a review</h1>
+        <form>
+            <label for="" data-i18n="review.rate1" class="rating-label">UserName(optional):</label>
+            <input type="text" class="name">
+            <label for="review" class="rating-label" data-i18n="review.rate2">write your review</label>
+            <textarea class="review_area"></textarea>
+            <div class="rateus">
+                <h4 class="rating-label" data-i18n="review.rate3">Rate our services:</h4>
+                 <div class="rating-container">
+                  <div class="stars-input" id="starRating">
+                      <i class="far fa-star star" data-value="1"></i>
+                      <i class="far fa-star star" data-value="2"></i>
+                      <i class="far fa-star star" data-value="3"></i>
+                      <i class="far fa-star star" data-value="4"></i>
+                      <i class="far fa-star star" data-value="5"></i>
+                  </div>
+                  <input type="hidden" id="rating" name="rating" value="0" required>
+              </div>
+              </div>
+             <div class="col-auto">
+									<button class="btn btn-primary">
+                                        <span class="submit-btn-text">Submit Review</span>
+										<span class="fa fa-paper-plane"></span>
+									</button>
+								</div>
+        </form>
+    </div>
+</div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Milden Adventures</h3>
+                    <p data-i18n="comp.env">Your premier travel partner for unforgettable savannah and beach experiences across Africa and beyond.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Destinations</h3>
+                    <a href="#">Kenya Safaris</a>
+                    <a href="#">Tanzania Tours</a>
+                    <a href="#">South Africa</a>
+                    <a href="#">Zanzibar Beaches</a>
+                    <a href="#">Mauritius</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Travel Blog</a>
+                    <a href="#">Testimonials</a>
+                    <a href="#">Careers</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-i18n="support">Support</h3>
+                    <a href="#" data-i18n="faq">FAQ</a>
+                    <a href="#" data-i18n="terms" >Booking Terms</a>
+                    <a href="#" data-i18n="contact">Contact Us</a>
+                    <a href="#" data-i18n="policy">Privacy Policy</a>
+                    <a href="#" data-i18n="travel">Travel Insurance</a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Milden Adventures Tours & Travel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+   
+            <div class="chat-toggle" id="chatToggle">
+                <i class="fas fa-comments"></i>
+            </div>
+
+            
+            <div class="chat-popup-button whatsapp-button" id="whatsappButton">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" loading="lazy" alt="WhatsApp Chat" />
+            </div>
+            
+                
+
+            <div id="overlay" class="overlay hidden">
+        <div class="overlay-content">
+            <span id="close-overlay" class="close-btn">&times;</span>
+            <div class="overlay-body">
+                <div class="overlay-image-container">
+                    <img id="overlay-image" src="" alt="Destination image" />
+                </div>
+                <div class="overlay-text">
+                    <h2 id="overlay-title"></h2>
+                    <p id="overlay-description"></p>
+                    <p id="overlay-price"></p>
+                    <div class="overlay-footer">
+                        <button class="action-btn primary" style="cursor: pointer;">
+                            <i class="fas fa-calendar-check"></i> Book Now
+                        </button>
+                        <button class="action-btn secondary">
+                            <i class="fas fa-heart"></i> Save to Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    
+    <div class="maodal2" id="quotemaodal2">
+        <div class="maodal2-content">
+            <button class="close-btn2" id="closeBtn">&times;</button>
+            <h2 id="qu" data-i18n="re.title">Request a Quote</h2>
+            <form id="quoteForm">
+                <div class="form-group">
+                    <label for="name" id="label" data-i18n="re.fullname">Full Name</label>
+                    <input data-i18n="re.fullinput" type="text" id="name" required placeholder="Enter your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email"  id="label" data-i18n="re.email">Email Address</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="message"  id="label" data-i18n="re.details">Additional Details</label>
+                    <textarea id="message" required placeholder="Describe your travel requirements"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn1" data-i18n="re.submit">Submit Request</button>
+            </form>
+            <p class="note1" data-i18n="re.de">We'll contact you within 24 hours to discuss about the tour</p>
+        </div>
+    </div>
+    <div class="container90 top-popup90" id="popup" style="display: none;">
+        <div class="left-section">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Book your dream vacation with Global Tours. Explore breathtaking destinations with our expertly crafted travel experiences.</p>
+            
+            <ul class="benefits">
+                <li><i class="fas fa-check-circle"></i> Best price guarantee</li>
+                <li><i class="fas fa-check-circle"></i> No booking fees</li>
+                <li><i class="fas fa-check-circle"></i> 24/7 customer support</li>
+                <li><i class="fas fa-check-circle"></i> Flexible cancellation policy</li>
+                <li><i class="fas fa-check-circle"></i> Verified customer reviews</li>
+            </ul>
+        </div>
+        
+        <div class="right-section">
+
+            <div class="form-header30">
+                <h2>Book Your Tour</h2>
+                <p>Fill in the details below to reserve your spot</p>
+                <button class="close-btn2" id="closeBtn" onclick="hidePopup()">&times;</button>
+            </div>
+            
+            <div class="form-container30">
+                <form id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group30">
+                            <label for="firstName" class="required">First Name</label>
+                            <input type="text" id="firstName" placeholder="Enter your first name" required>
+                        </div>
+                        <div class="form-group30">
+                            <label for="lastName" class="required">Last Name</label>
+                            <input type="text" id="lastName" placeholder="Enter your last name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group30">
+                            <label for="email" class="required">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group30">
+                            <label for="phone" class="required">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group30">
+                        <label for="destination" class="required">Destination</label>
+                        <select id="destination" required>
+                            <option value="" disabled selected>Select a destination</option>
+                            <option value="paris">Paris, France</option>
+                            <option value="bali">Bali, Indonesia</option>
+                            <option value="kyoto">Kyoto, Japan</option>
+                            <option value="santorini">Santorini, Greece</option>
+                            <option value="maldives">Maldives</option>
+                            <option value="newyork">New York, USA</option>
+                            <option value="cairo">Cairo, Egypt</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group30">
+                            <label for="startDate" class="required">Start Date</label>
+                            <input type="date" id="startDate" required>
+                        </div>
+                        <div class="form-group30">
+                            <label for="endDate" class="required">End Date</label>
+                            <input type="date" id="endDate" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group30">
+                        <label class="required">Travelers</label>
+                        <div class="travelers">
+                            <div class="traveler-type">
+                                <label>Adults</label>
+                                <div class="counter">
+                                    <button type="button" id="adultMinus">-</button>
+                                    <input type="number" id="adults" value="1" min="1" max="10" readonly>
+                                    <button type="button" id="adultPlus">+</button>
+                                </div>
+                            </div>
+                            <div class="traveler-type">
+                                <label>Children</label>
+                                <div class="counter">
+                                    <button type="button" id="childMinus">-</button>
+                                    <input type="number" id="children" value="0" min="0" max="10" readonly>
+                                    <button type="button" id="childPlus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group30">
+                        <label for="accommodation">Accommodation Type</label>
+                        <select id="accommodation">
+                            <option value="standard">Standard (3-star)</option>
+                            <option value="deluxe" selected>Deluxe (4-star)</option>
+                            <option value="luxury">Luxury (5-star)</option>
+                            <option value="resort">Beach Resort</option>
+                            <option value="boutique">Boutique Hotel</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group30">
+                        <label for="specialRequests">Special Requests</label>
+                        <textarea id="specialRequests" rows="3" placeholder="Dietary restrictions, accessibility needs, etc."></textarea>
+                    </div>
+                    <div class="form-group30" style="display: flex; flex-direction: row;">
+                       <input type="checkbox" style="width: 5%;" required>
+                       <label style="gap: 5px;">Accept <a style="cursor: pointer;">Terms of Agreement</a></label>
+                    </div>
+                    
+                    <button type="submit" class="btn355">Book Now </button>
+                </form>
+            </div>
+        </div>
+    </div>
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+    
+    // Toggle between bars and times icon
+    const icon = this.querySelector('i');
+    if (icon.classList.contains('fa-bars')) {
+        icon.classList.replace('fa-bars', 'fa-times');
+    } else {
+        icon.classList.replace('fa-times', 'fa-bars');
+    }
+});
+</script>
+    <script>
+        // DOM elements
+        const quoteBtn = document.getElementById('quoteBtn');
+        const maodal2 = document.getElementById('quotemaodal2');
+        const closeBtn = document.getElementById('closeBtn');
+        const quoteForm = document.getElementById('quoteForm');
+        
+        // Open maodal2 with smooth transition
+        quoteBtn.addEventListener('click', () => {
+            maodal2.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+        
+        // Close maodal2 with X button
+        closeBtn.addEventListener('click', () => {
+            maodal2.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        });
+        
+        // Close maodal2 when clicking outside
+        maodal2.addEventListener('click', (e) => {
+            if (e.target === maodal2) {
+                maodal2.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Prevent maodal2 from closing when clicking inside
+        document.querySelector('.maodal2-content').addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+        
+        // Close maodal2 with ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && maodal2.classList.contains('active')) {
+                maodal2.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Handle form submission
+        quoteForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            
+            // Close the maodal2 after submission
+            maodal2.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Optionally reset the form after submission
+            // quoteForm.reset();
+        });
+        
+        // Preserve form data when maodal2 is closed
+    </script>
+    <script>
+      var divs = [];
+      var currentIndex = 0; 
+      var divElements = document.querySelectorAll('.display-div');
+      divElements.forEach(function(div) {
+        divs.push(div);
+      });
+      function toggleDivs() {
+        divs[currentIndex].classList.remove('slide-in');
+        divs[currentIndex].classList.add('slide-out');
+        currentIndex = (currentIndex + 1) % divs.length;
+        divs[currentIndex].classList.remove('slide-out');
+        divs[currentIndex].classList.add('slide-in');
+      }
+      setInterval(toggleDivs, 10000);
+    </script>
+   
+
+    <script>
+            const chatToggle = document.getElementById('chatToggle');
+            const whatsappButton = document.getElementById('whatsappButton');
+            const assistantButton = document.getElementById('assistantButton');
+
+            let isOpen = false;
+
+            chatToggle.addEventListener('click', () => {
+                isOpen = !isOpen;
+
+                whatsappButton.classList.toggle('show', isOpen);
+                assistantButton.classList.toggle('show', isOpen);
+            });
+</script>
+
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Change icon based on menu state
+            if (navLinks.classList.contains('active')) {
+                mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+        
+       
+        // Search Functionality
+        const searchInput = document.querySelector('.search-container input');
+        const searchButton = document.querySelector('.search-container button');
+        
+        searchButton.addEventListener('click', () => {
+            if(searchInput.value.trim() !== '') {
+                console.log(`Searching for: ${searchInput.value}`);
+                // In a real implementation, this would trigger a search function
+            }
+        });
+        
+        searchInput.addEventListener('keypress', (e) => {
+            if(e.key === 'Enter' && searchInput.value.trim() !== '') {
+                console.log(`Searching for: ${searchInput.value}`);
+                // In a real implementation, this would trigger a search function
+            }
+        });
+    
+        
+        // Slideshow Functionality
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Show the selected slide
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        // Add click events to indicators
+        indicators.forEach(indicator => {
+            indicator.addEventListener('click', () => {
+                showSlide(parseInt(indicator.getAttribute('data-index')));
+            });
+        });
+        
+        // Auto advance slides
+        setInterval(() => {
+            let nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 5000);
+    </script>
+    <script>
+function scrollUpAfterSearch() {
+    // Scroll up by 100 pixels (you can adjust this)
+    window.scrollBy({ top: 520, behavior: 'smooth' });
+}
+</script>
+
+<script>
+        // Translation data
+        const translations = {
+            en: {
+                "intro.23":"Explore Kenya's diverse landscapes from pristine beaches to majestic wildlife reserves",
+                "mountain":"Mountains",
+                "luxury":"Luxury",
+                "safari":"Safari",
+                "beach":"Beaches",
+                "destination":"All Destinations",
+                "travel":"Travel Insurance",
+                "policy":"Privacy Policy",
+                "contact":"Contact Us",
+                "terms":"Booking Terms",
+                "faq":"FAQ",
+                "support":"support",
+                "safari.titles":"Travel Experiences",
+                "comp.env":"Your premier travel partner for unforgettable savannah and beach experiences across Africa and beyond.",
+                "tour.Europe":"Embark on a 12-day Grand Tour through Europe’s most enchanting destinations across France, Italy, and Switzerland. Admire the Eiffel Tower’s glow in Paris, explore Rome’s ancient Colosseum, and cruise Venice’s romantic canals. Marvel at the majestic Swiss Alps in Lucerne and Zurich—where elegance meets alpine adventure.",
+                "tour.jordan":"Step into Jordan’s timeless beauty with the rose-red city of Petra and the surreal landscapes of Wadi Rum. Wander through ancient canyons, stargaze in desert camps, and float in the Dead Sea’s healing waters. From historic marvels to Bedouin hospitality, every moment is steeped in wonder and warmth.",
+                "tour.dubai":"Experience the UAE’s dazzling blend of modern luxury and cultural heritage in Dubai and Abu Dhabi. Marvel at futuristic skyscrapers, golden deserts, and the opulence of the Sheikh Zayed Grand Mosque. From thrilling dune adventures to world-class shopping, it’s a journey of pure indulgence.",
+                "tour.uganda":"Venture into Uganda’s lush jungles for an unforgettable gorilla trekking experience in Bwindi. Feel the thrill of close encounters with mountain gorillas and diverse wildlife. Unwind with a scenic Nile cruise in Murchison Falls, where adventure meets tranquility.",
+                "tour.egypt":"Uncover Egypt’s ancient wonders with a journey along the timeless Nile River. Marvel at the pyramids of Giza, grand temples of Luxor, and royal tombs of the Valley of the Kings. From bustling Cairo to serene felucca cruises, Egypt is a land of myth and majesty.",
+                "tour.africa":"Journey through South Africa from the vibrant streets of Cape Town to the wilds of Kruger National Park. Savor world-class wines, dramatic coastlines, and thrilling Big Five safaris. From Table Mountain to untamed savannahs, it’s a land of contrast and unforgettable beauty.",
+                "tour.mara":"Embark on Kenya’s classic safari adventure through the savannahs of Maasai Mara and Lake Naivasha. Witness the Big Five, vibrant tribal culture, and golden sunsets over the plains. Unwind on Diani’s pristine beaches, where turquoise waters meet Swahili charm.",
+                "tour.peru":"Uncover Peru’s ancient wonders, vibrant markets, and breathtaking Andean landscapes. Savor traditional dishes like ceviche and explore rich Incan heritage in every step. From the mystical ruins of Machu Picchu to the colorful streets of Cusco, adventure awaits.",
+                "tour.america":"Explore the USA’s East Coast with iconic landmarks, historic cities, and scenic coastlines. Savor New York’s fast-paced energy, Boston’s colonial charm, and Washington D.C.’s monuments.From bustling streets to quiet harbors, it’s a journey through the roots of American heritage.",
+                "tour.asia":"Experience South Asia’s vibrant heart through India’s colorful festivals, majestic palaces, and sacred rivers. Indulge in aromatic spices, flavorful curries, and the warmth of local hospitality. From the Taj Mahal’s grandeur to Kerala’s calm backwaters, every moment is a cultural feast.",
+                "tour.japan":"Discover Japan’s futuristic cities, serene temples, and timeless traditions in every corner. Savor authentic sushi, tea ceremonies, and the vibrant flavors of Osaka street food. From Tokyo’s neon lights to Kyoto’s quiet shrines, it’s a journey of contrast and wonder..",
+                "re.bok":"Request quote",
+                "re.de":"We'll contact you within 24 hours to discuss about the tour",
+                "re.details":"Additional details",
+                "re.email":"Email Address",
+                "re.title":"Request a Quote",
+                "re.fullname":"fullname",
+                "bookk":"book now",
+                "opening_header":"Discover Our Story",
+               "header.nav1": "Home",
+                "header.nav2": "Destinations",
+                "header.nav3": "Safari Tours",           
+                "header.nav4": "Beach Resorts",
+                "header.nav5": "About",
+                "header.nav6": "Contact",
+                "opening1":"At Milden Adventures, we craft unforgettable journeys that connect you with the world's most breathtaking destinations. With over a decade of expertise, we transform travel dreams into reality.",
+                "hero.title": "Discover the Wild Beauty of Savannah & Beaches",
+                "hero.subtitle": "Experience the thrill of African safaris and relax on pristine beaches with our expertly crafted tours and travel packages.",
+                "hero.button": "Explore Now",
+                "features.title": "Our Travel Services",
+                "choice.h": "Why Choose Us:",
+                "choice.1": "We listen to our clients' objectives and aspirations, providing customized holiday destinations. We are innovative and passionate about our work, always coming up with new ways to enrich your safari and holiday experiences. High-quality services: Our supreme team works rigorously to ensure your holiday experiences exceed your expectations. We always deliver on time: We genuinely understand the value of time in business and adhere to deadlines, delivering all projects on time.",
+                "choice.2": "Our Affiliates & Memberships",
+                "safari.h": "Safari Adventures",
+                "safari.b": "Get up close with Africa's majestic wildlife in their natural habitats.",
+                "category.h": "Beach Escapes",
+                "category.b": "Relax on pristine beaches with crystal-clear waters and luxury resorts.",
+                "category.h1": "Nature Treks",
+                "category.h2": "Explore diverse landscapes from savannahs to mountains and forests.",
+                "category.h3": "Luxury Lodges",
+                "category.h4": "Stay in exquisite accommodations blending comfort with wilderness.",
+                "hero.title": "Explore the Wild Beauty of Savannah & Beaches",
+                "hero.subtitle": "Experience the thrill of African safaris and stroll along pristine beaches with our expertly crafted tours and travel packages.",
+                "hero.button": "Start Your Journey",
+                "section.header":"Featured Destinations",
+                "search.placeholder": "Search destinations...",
+                "search.minprice": "Min price",
+                "search.maxPrice": "Max price",
+                "review": "What our customers say:",
+                "review.1": "Our family of 10 traveled to Tsavo National Park during the 2024 holidays and the trip was wonderful! Dennis and Milcah helped set up all details and everything worked like clockwork. Airfare from multiple cities, transfers, multiple hotel rooms, COVID testing protocols - everything was perfect. The White Sands was a beautiful and accommodating all-inclusive for our large and diverse group. The staff there and the workers on our excursions were all friendly and helpful. I think they are so happy to have tourists back! Not going to cancel a trip that took a year to plan! Our trip occurred without a hitch and now we have lifetime memories of our time together. We are already planning our next adventure!",
+                "review.2": "Just wanted to let you know that the trip was fantastic and everything worked out seamlessly! The hotels and the tours you recommended were excellent! Hotel locations in particular were ideal. Milcah came through as promised with the safari drives planned in advance, and that experience was very special for us. Also, the Trip Plan made things very easy for us. It was nice that we could all check out the scheduled daily plan.",
+                "review.3": "We are back from Dubai and wanted to send you a sincere thank you for helping us organize our trip. It was indeed the trip of a lifetime and we are so grateful and appreciative of the work you did to help make it so magical. As a couple of people who have spent years traveling independently, booking things on our own and improvising to solve problems along the way, I now see the incredible impact an experienced and professional travel agent can have on a trip. We could not have been more pleased with the outcome for our special 25th Anniversary trip to Dubai. You were bang on with many of the choices and recommendations you made to us.",
+                "review.4": "Thank You Milcah! Just home from the wonderful trip you recommended to Maldives with Linda Sim and David Talek. Not only was the trip mind-blowing in its selection of gardens, hotels, meals...oh the meals!...but the group was collaborative and most interesting being mainly from areas close to us. The highlight from a general perspective was the guides they are super stars and made everyone’s wishes happen with their delightful professional yet warm character. Thank you for suggesting this for us....truly a trip to be remembered for all the good reasons. We look forward to working with Milcah for our next adventure!",
+                "review.5": "Hey Milcah and Dennis, Thanks for following up! Honestly Kenya far exceeded our expectations, what a beautiful country with beautiful people. We have truly fallen in love with it and can’t wait to go back one day…maybe more safari and adventure holiday! We are very happy and satisfied with how you and your team helped us build our dream holiday. Thank you for everything!",
+                "review.6": "Milcah is great to work with! She has helped with numerous travel occasions. She responds very promptly to requests and has helped to make wonderful vacation plans for my family and I.",
+                "review.7": "Booking through you was very easy and made our lives so much easier. I have nothing bad to say! Thank you for giving us tips and guidance before we left on what to bring and such, that was very helpful! Thanks again.",
+                "review.8": "You did a fabulous job. There were no hitches. Thank you again for all your work planning this trip.",
+                "review.9": "Milcah was great with the entire process from planning to updates during the trip. We had 11 people and everything was perfectly executed. We appreciate all of her hard work. It was truly the trip of a lifetime. Thank you!",
+                "review.10": "Wow, wow, wow! Am I gushing too much about how awesome Milcah and the team are? 2 for 2 amazing experiences. Life is short; get on with once in a lifetime experiences. Milden Travel is the best Luxury Travel Agency I have ever used. If you are looking for epic stays in the world's most beautiful places - Milcah and the team are very knowledgeable and their affiliations and personal connections will ensure you receive distinguished greetings, service, recognition and maybe even some gifts! We have used Milcah for our stays in Kenya and East Africa at large. Oh, did I mention that they were able to get us rates lower than Expedia!!!",
+                "review.rate": "Write a Review",
+                "review.rate1": "UserName (optional):",
+                "review.rate2": "Write your review",
+                "review.rate3": "Rate our services:",
+                "features.guides.title": "Local Guides",
+                "features.guides.description": "Connect with experienced local guides who will show you hidden gems and authentic experiences in every destination.",
+                "features.translation.title": "Real-time Translation",
+                "features.translation.description": "Overcome language barriers with our instant translation tools for menus, signs, and conversations.",
+                "features.itinerary.title": "Custom Itineraries",
+                "features.itinerary.description": "Personalized travel plans tailored to your interests, budget, and preferred pace of travel.",
+                "testimonials.title": "Traveler Experiences",
+                "testimonials.one": "This app transformed my trip to China. I could navigate and communicate easily!",
+                "testimonials.one.location": "Tokyo, Japan",
+                "testimonials.two": "As a solo traveler in Tanzania, the language support gave me great confidence to explore on my own.",
+                "testimonials.two.location": "Nairobi, Kenya",
+                "testimonials.three": "Cultural tips helped me avoid embarrassing mistakes and connect better with locals.",
+                "testimonials.three.location": "Barcelona, Spain",
+                "footer.about": "About Us",
+                "footer.aboutText": "We are passionate about making travel accessible and meaningful for everyone, regardless of language barriers.",
+                "footer.links": "Quick Links",
+                "footer.home": "Home",
+                "footer.services": "Services",
+                "footer.destinations": "Destinations",
+                "footer.blog": "Travel Blog",
+                "footer.contact": "Contact Us",
+                "footer.address": '123 Global Travel St, World City',
+                'footer.newsletter': 'Newsletter Subscription',
+                'footer.newsletterText': 'Subscribe for travel tips and exclusive offers.',
+                'footer.subscribe': 'Subscribe',
+                'footer.rights': 'All rights reserved.'
+            },
+            fr:{
+                "intro.23":"Explorez les paysages variés du Kenya, des plages immaculées aux majestueuses réserves de faune.",
+                "mountain":"Montagnes",
+                "luxury":"Luxe",
+                "safari":"Safari",
+                "beach":"Plages",
+                "destination":"Toutes les destinations",
+                "travel":"Assurance voyage",
+                "policy":"Politique de confidentialité",
+                "contact":"Nous contacter",
+                "terms":"Conditions de réservation",
+                "faq":"FAQ",
+                "support":"Assistance",
+                "safari.titles":"Expériences de voyage",
+                "comp.env":"Votre partenaire de voyage privilégié pour des expériences inoubliables de savane et de plage à travers l’Afrique et au-delà.",
+                "tour.Europe":"Partez pour un Grand Tour de 12 jours à travers les destinations les plus envoûtantes d’Europe, en France, en Italie et en Suisse. Admirez les lumières de la tour Eiffel à Paris, explorez l’ancien Colisée de Rome et naviguez sur les canaux romantiques de Venise. Émerveillez-vous devant les majestueux Alpes suisses à Lucerne et Zurich—là où l’élégance rencontre l’aventure alpine.",
+                "tour.jordan":"Plongez dans la beauté intemporelle de la Jordanie avec la ville rose de Pétra et les paysages surréalistes de Wadi Rum. Parcourez des canyons anciens, observez les étoiles dans des camps du désert et flottez dans les eaux curatives de la mer Morte. Des merveilles historiques à l’hospitalité bédouine, chaque instant est empreint de magie et de chaleur.",
+                "tour.dubai":"Découvrez le mélange éblouissant de luxe moderne et d’héritage culturel des Émirats arabes unis à Dubaï et Abou Dabi. Admirez les gratte-ciel futuristes, les déserts dorés et l’opulence de la grande mosquée Sheikh Zayed. Des aventures dans les dunes aux boutiques de classe mondiale, c’est un voyage placé sous le signe du raffinement absolu.",
+                "tour.uganda":"Partez à l’aventure dans les jungles luxuriantes de l’Ouganda pour une expérience inoubliable de randonnée aux gorilles dans la forêt de Bwindi. Ressentez l’adrénaline des rencontres rapprochées avec les gorilles de montagne et une faune exceptionnelle. Détendez-vous lors d’une croisière pittoresque sur le Nil à Murchison Falls, où l’aventure rencontre la sérénité.",
+                "tour.egypt":"Découvrez les merveilles anciennes de l'Égypte lors d’un voyage le long du Nil éternel. Admirez les pyramides de Gizeh, les temples grandioses de Louxor et les tombeaux royaux de la Vallée des Rois. Du Caire animé aux paisibles croisières en felouque, l'Égypte est une terre de mythes et de majesté.",
+                "tour.africa":"Parcourez l’Afrique du Sud, des rues animées du Cap aux terres sauvages du parc national Kruger. Savourez des vins de renommée mondiale, des côtes spectaculaires et des safaris palpitants à la rencontre des Big Five. De la Montagne de la Table aux savanes indomptées, c’est une terre de contrastes et de beauté inoubliable.",
+                "tour.mara":"Partez pour une aventure safari classique au Kenya, à travers les savanes du Maasai Mara et du lac Naivasha. Observez les Big Five, découvrez la culture tribale vibrante et admirez les couchers de soleil dorés sur les plaines. Détendez-vous sur les plages immaculées de Diani, où les eaux turquoise rencontrent le charme swahili.",
+                "tour.peru":"Découvrez les merveilles anciennes du Pérou, ses marchés animés et les paysages époustouflants des Andes. Savourez des plats traditionnels comme le ceviche et explorez l’héritage riche des Incas à chaque pas. Des ruines mystiques du Machu Picchu aux rues colorées de Cusco, l’aventure vous attend.",
+                "tour.america":"Explorez la côte Est des États-Unis avec ses monuments emblématiques, ses villes historiques et ses littoraux pittoresques. Savourez l’énergie trépidante de New York, le charme colonial de Boston et les monuments de Washington D.C. Des rues animées aux ports tranquilles, c’est un voyage à travers les racines du patrimoine américain.",
+                "tour.asia":"Découvrez le cœur vibrant de l’Asie du Sud à travers les festivals colorés de l’Inde, ses palais majestueux et ses rivières sacrées.Laissez-vous séduire par les épices aromatiques, les currys savoureux et la chaleur de l’hospitalité locale. De la grandeur du Taj Mahal aux paisibles backwaters du Kerala, chaque instant est un festin culturel.",
+                "tour.japan":"Découvrez les villes futuristes du Japon, ses temples paisibles et ses traditions intemporelles à chaque coin de rue. Savourez des sushis authentiques, des cérémonies du thé et les saveurs vibrantes de la street food d’Osaka. Des lumières néon de Tokyo aux sanctuaires silencieux de Kyoto, c’est un voyage de contrastes et de merveilles.",
+                "re.bok":"Demander un devis",
+                "re.de":"Nous vous contacterons dans les 24 heures pour discuter de la visite.",
+                "re.details":"Détails supplémentaires",
+                "re.email":"Adresse e-mail",
+                 "re.fullname":"Nom complet",
+                "bookk":"Réservez maintenant",
+                "header.nav1": "Accueil",
+                "opening_header":"Découvrez notre histoire",
+                "header.nav2": "Destinations",
+                "header.nav3": "Safari Tours",
+                "opening1":"Chez Milden Adventures, nous concevons des voyages inoubliables qui vous connectent aux destinations les plus époustouflantes du monde. Avec plus d'une décennie d'expertise, nous transformons vos rêves de voyage en réalité.",
+                "header.nav4": "Plages",
+                "header.nav5": "À propos",
+                "header.nav6": "Contact",
+                "hero.title": "Découvrez la beauté sauvage de la savane et des plages",
+                "hero.subtitle": "Vivez l'excitation des safaris africains et détendez-vous sur des plages immaculées avec nos circuits et forfaits de voyage.",
+                "hero.button": "Explorer maintenant",
+                "section.header": "Destinations phares",
+                "search.placeholder": "Rechercher des destinations...",
+                "search.minprice": "Prix min",
+                "search.maxPrice": "Prix max",
+                "choice.h": "Pourquoi nous choisir :",
+                "choice.1": "Nous écoutons les objectifs et aspirations de nos clients, fournissant des destinations de vacances personnalisées. Nous sommes innovants et passionnés par notre travail, toujours à la recherche de nouvelles façons d'enrichir vos expériences de safari et de vacances. Services de haute qualité : Notre équipe travaille rigoureusement pour s'assurer que vos expériences de vacances dépassent vos attentes. Nous respectons toujours les délais : Nous comprenons vraiment la valeur du temps dans les affaires et respectons les délais, livrant tous les projets à temps.",
+                "choice.2": "Nos affiliations et adhésions",
+                "safari.h": "Aventures Safari",
+                "safari.b": "Approchez-vous de la faune majestueuse de l'Afrique dans son habitat naturel.",
+                "category.h": "Évasions Plage",
+                "review": "Ce que nos clients disent :",
+                "review.1": "Notre famille de 10 personnes a voyagé au parc national de Tsavo pendant les vacances 2024 et le voyage a été merveilleux ! Dennis et Milcah ont aidé à organiser tous les détails et tout s'est déroulé comme sur des roulettes. Vols depuis plusieurs villes, transferts, plusieurs chambres d'hôtel, protocoles de test COVID - tout était parfait. Le White Sands était un tout compris magnifique et accueillant pour notre groupe large et diversifié. Le personnel là-bas et les travailleurs lors de nos excursions étaient tous amicaux et serviables. Je pense qu'ils sont si heureux d'avoir des touristes de retour ! Pas question d'annuler un voyage qui a pris un an à planifier ! Notre voyage s'est déroulé sans accroc et maintenant nous avons des souvenirs à vie de notre temps ensemble. Nous planifions déjà notre prochaine aventure !",
+                "review.2": "Je voulais juste vous faire savoir que le voyage était fantastique et que tout s'est déroulé sans accroc ! Les hôtels et les visites que vous avez recommandés étaient excellents ! Les emplacements des hôtels étaient particulièrement idéaux. Milcah a tenu sa promesse avec les safaris planifiés à l'avance, et cette expérience a été très spéciale pour nous. De plus, le plan de voyage a rendu les choses très faciles pour nous. C'était agréable de pouvoir tous consulter le plan quotidien prévu.",
+                "review.3": "Nous sommes de retour de Dubaï et voulions vous envoyer un sincère merci pour nous avoir aidés à organiser notre voyage. C'était vraiment le voyage d'une vie et nous sommes tellement reconnaissants et appréciatifs du travail que vous avez fait pour le rendre si magique. En tant que couple qui a passé des années à voyager de manière indépendante, à réserver des choses par nous-mêmes et à improviser pour résoudre les problèmes en cours de route, je vois maintenant l'impact incroyable qu'un agent de voyage expérimenté et professionnel peut avoir sur un voyage. Nous n'aurions pas pu être plus satisfaits du résultat de notre voyage spécial pour notre 25e anniversaire à Dubaï. Vous avez été parfait avec beaucoup des choix et recommandations que vous nous avez faits.",
+                "review.4": "Merci Milcah ! Juste de retour du merveilleux voyage que vous nous avez recommandé aux Maldives avec Linda Sim et David Talek. Non seulement le voyage était époustouflant dans sa sélection de jardins, d'hôtels, de repas... oh les repas !... mais le groupe était collaboratif et très intéressant étant principalement composé de personnes venant de régions proches de nous. Le point fort d'un point de vue général était les guides, ils sont des superstars et ont réalisé les souhaits de chacun avec leur caractère professionnel mais chaleureux. Merci de nous avoir suggéré cela pour nous... vraiment un voyage à retenir pour toutes les bonnes raisons. Nous avons hâte de travailler avec Milcah pour notre prochaine aventure !",
+                "review.5": "Salut Milcah et Dennis, merci de nous avoir contactés ! Honnêtement, le Kenya a largement dépassé nos attentes, quel beau pays avec de belles personnes. Nous sommes vraiment tombés amoureux de ce pays et avons hâte d'y retourner un jour... peut-être pour plus de safari et de vacances d'aventure ! Nous sommes très heureux et satisfaits de la façon dont vous et votre équipe nous avez aidés à construire nos vacances de rêve. Merci pour tout !",
+                "review.6": "Milcah est géniale à travailler ! Elle a aidé pour de nombreuses occasions de voyage. Elle répond très rapidement aux demandes et a aidé à faire de merveilleux plans de vacances pour ma famille et moi.",
+                "review.7": "Réserver avec vous a été très facile et a rendu nos vies tellement plus simples. Je n'ai rien de négatif à dire ! Merci de nous avoir donné des conseils et des orientations avant notre départ sur ce qu'il fallait apporter et tout, c'était très utile ! Merci encore.",
+                "review.8": "Vous avez fait un travail fabuleux. Il n'y a eu aucun accroc. Merci encore pour tout votre travail de planification de ce voyage.",
+                "review.9": "Milcah a été géniale tout au long du processus, de la planification aux mises à jour pendant le voyage. Nous avions 11 personnes et tout a été parfaitement exécuté. Nous apprécions tout son travail acharné. C'était vraiment le voyage d'une vie. Merci !",
+                "review.10": "Wow, wow, wow ! Est-ce que je m'emballe trop sur à quel point Milcah et l'équipe sont géniales ? 2 pour 2 expériences incroyables. La vie est courte ; lancez-vous dans des expériences uniques. Milden Travel est la meilleure agence de voyage de luxe que j'ai jamais utilisée. Si vous cherchez des séjours épiques dans les plus beaux endroits du monde - Milcah et l'équipe sont très compétents et leurs affiliations et connexions personnelles garantiront que vous recevrez des salutations distinguées, un service, une reconnaissance et peut-être même des cadeaux ! Nous avons utilisé Milcah pour nos séjours au Kenya et en Afrique de l'Est en général. Oh, ai-je mentionné qu'ils ont pu nous obtenir des tarifs inférieurs à ceux d'Expedia !",
+                "review.rate": "Écrire un avis",
+                "review.rate1": "Nom d'utilisateur (facultatif) :",
+                "review.rate2": "Écrivez votre avis",
+                "review.rate3": "Évaluez nos services :",
+                "features.title": "Nos services de voyage",
+                "features.guides.title": "Guides Locaux",
+                "hero.title": "Découvrez la beauté sauvage de la savane et des plages",
+                "re.title":"Demander un devis",
+                "category.b": "Détendez-vous sur des plages immaculées avec des eaux cristallines et des complexes de luxe.",
+                "category.h1": "Randonnées Nature",
+                "category.h2": "Explorez des paysages divers allant des savanes aux montagnes et forêts.",
+                "category.h3": "Lodges de Luxe",
+                "category.h4": "Séjournez dans des hébergements exquis alliant confort et nature.",
+                "features.title": "Nos services de voyage",
+                "features.guides.title": "Guides locaux",
+                "features.guides.description": "Connectez-vous avec des guides locaux expérimentés qui vous montreront les trésors cachés et les expériences authentiques de chaque destination.",
+                "features.translation.title": "Traduction en temps réel",
+                "features.translation.description": "Surmontez les barrières linguistiques avec nos outils de traduction instantanée pour les menus, les panneaux et les conversations.",
+                "features.itinerary.title": "Itinéraires personnalisés",
+                "features.itinerary.description": "Plans de voyage personnalisés adaptés à vos intérêts, budget et rythme de voyage préféré.",
+                "testimonials.title": "Expériences des voyageurs",
+                "testimonials.one": 'Cette application a transformé mon voyage en Chine. J’ai pu naviguer et communiquer facilement !',
+                "testimonials.one.location": 'Tokyo, Japon',
+                "testimonials.two": 'En tant que voyageur solo en Tanzanie, le support linguistique m’a donné une grande confiance pour explorer par moi-même.',
+                "testimonials.two.location": 'Nairobi, Kenya',
+                "testimonials.three": 'Les conseils culturels m’ont aidé à éviter les erreurs embarrassantes et à mieux me connecter avec les habitants.',
+                "testimonials.three.location": 'Barcelone, Espagne',
+                'footer.about': 'À propos de nous',
+                'footer.aboutText': 'Nous sommes passionnés par le fait de rendre le voyage accessible et significatif pour tous, quelles que soient les barrières linguistiques.',
+                'footer.links': 'Liens rapides',
+                'footer.home': 'Accueil',
+                'footer.services': 'Services',
+                'footer.destinations': 'Destinations',
+                'footer.blog': 'Blog de voyage',
+
+            },
+            cn: {
+                "intro.23":"探索肯尼亚多样的自然风光，从原始海滩到壮丽的野生动物保护区。",
+                "mountain":"山脉",
+                "luxury":"奢华",
+                "safari":"狩猎之旅",
+                "beach":"海滩",
+                "destination":"所有目的地 ",
+                "travel":"旅游保险",
+                "policy":"隐私政策",
+                "contact":"联系我们",
+                "terms":"预订条款",
+                "faq":"常见问题",
+                "support":"支持",
+                "safari.titles":"旅行体验",
+                "comp.env":"您值得信赖的首选旅游伙伴，带您畅享非洲及其他地区难忘的草原与海滩之旅。",
+                "tour.Europe":"踏上为期12天的欧洲盛大之旅，畅游法国、意大利和瑞士最迷人的目的地。 在巴黎欣赏埃菲尔铁塔的璀璨灯光，探索罗马古老的斗兽场，乘船穿越威尼斯浪漫的运河。 在卢塞恩和苏黎世欣赏雄伟的瑞士阿尔卑斯山脉——优雅与高山探险的完美结合。",
+                "tour.jordan":"走进约旦永恒的美景，探索玫瑰红之城佩特拉和瓦迪拉姆如梦似幻的沙漠风光。 漫步在古老峡谷中，在沙漠营地仰望星空，漂浮在死海的疗愈水域中。 从历史奇迹到贝都因人的热情好客，每一刻都充满奇迹与温暖。 ",
+                "tour.dubai":"在迪拜和阿布扎比，体验阿联酋现代奢华与文化传承的耀眼融合。 惊叹于未来感的摩天大楼、金色沙漠，以及谢赫扎耶德大清真寺的宏伟壮丽。 从刺激的沙丘探险到世界级购物之旅，这是一段纯粹奢享的旅程。",
+                "tour.uganda":"踏入乌干达郁郁葱葱的丛林，在布恩迪森林展开难忘的黑猩猩徒步探险。 近距离接触高山大猩猩和多样的野生动物，感受心跳加速的刺激体验。 在穆尔乔森瀑布享受风景如画的尼罗河游船之旅，冒险与宁静在此交汇。",
+                "tour.egypt":"沿着永恒的尼罗河开启探索埃及古老奇迹的旅程。 惊叹于吉萨金字塔、卢克索宏伟的神庙，以及帝王谷中的皇家陵墓。 从喧嚣的开罗到宁静的风帆船巡游，埃及是一片充满神话与庄严的土地。",
+                "tour.africa":"穿越南非，从开普敦充满活力的街头到克鲁格国家公园的原始荒野。 品味世界级美酒、壮丽的海岸线，以及惊心动魄的非洲五霸野生动物之旅。 从桌山到广袤的原野，这是一片充满对比与难忘之美的土地。",
+                "tour.mara":"踏上肯尼亚经典的野生动物之旅，穿越马赛马拉和纳瓦沙湖的辽阔大草原。 目睹非洲五霸、感受充满活力的部落文化，以及平原上金色的落日。 在迪亚尼洁白的沙滩上放松身心，感受碧蓝海水与斯瓦希里风情的完美融合。",
+                "tour.peru":"揭开秘鲁古老奇迹的面纱，探索热闹的市场和令人惊叹的安第斯山脉风光。 品尝秘鲁传统美食如酸橘汁腌鱼（Ceviche），在每一步中感受丰富的印加文化遗产。 从神秘的马丘比丘遗址到五彩缤纷的库斯科街头，一场冒险正等待着你。",
+                "tour.america":"探索美国东海岸，感受标志性地标、历史悠久的城市和风景如画的海岸线。 品味纽约的快节奏活力、波士顿的殖民魅力，以及华盛顿特区的纪念碑群。 从繁忙的街道到宁静的港口，这是一段探索美国文化根源的旅程。",
+                "tour.asia":"通过印度多彩的节日、宏伟的宫殿和神圣的河流，感受南亚充满活力的心脏。 沉醉于芳香的香料、浓郁的咖喱，以及当地人热情好客的氛围中。 从泰姬陵的壮丽到喀拉拉宁静的水道，每一刻都是一场文化盛宴",
+                "tour.japan":"探索日本未来感十足的城市、宁静的寺庙，以及遍布各地的永恒传统。尽情享用地道寿司、茶道体验，以及大阪街头美食的多彩风味。从东京的霓虹灯到京都的静谧神社，这是一段充满对比与奇迹的旅程。",
+                "re.bok":"请求报价",
+                "re.de":"我们将在24小时内与您联系，讨论旅游相关事宜。",
+                "re.details":"附加信息 (fùjiā xìnxī)",
+                "Adresse e-mail":"电子邮件地址 (diànzǐ yóujiàn dìzhǐ)",
+                "re.fullname":"全名 (quán míng)",
+                "re.title":"请求报价",
+                "bookk":" 立即预订",
+                "opening_header":"了解我们的故事",
+                "header.nav1": "首页",
+                "header.nav2": "目的地",
+                "header.nav3": "狩猎之旅",
+                "header.nav4": "海滩度假村",
+                "header.nav5": "关于我们",
+                "opening1":"在 Milden Adventures，我们精心打造令人难忘的旅程，让您与世界上最壮丽的目的地紧密相连。凭借十多年的专业经验，我们将您的旅行梦想变为现实",
+                "header.nav6": "联系我们",
+                "header.title": "国际旅行助手",
+                "hero.title": "探索稀树草原与海滩的野性之美",
+                "hero.subtitle": "体验非洲狩猎之旅的刺激，漫步洁白海滩，尽享我们精心打造的旅游套餐。",
+                "hero.button": "开始您的旅程",
+                "features.title": "我们的旅行服务",
+                "review": "客户评价：",
+                "review.1": "我们的10人家庭在2024年假期期间前往Tsavo国家公园，旅行非常精彩！Dennis和Milcah帮助安排了所有细节，一切都如同时钟般运转。来自多个城市的机票、转机、多个酒店房间、COVID检测协议 - 一切都很完美。White Sands是一个美丽且适合我们这个大而多样化团队的全包式度假村。那里的员工和我们游览时的工作人员都非常友好和乐于助人。我想他们非常高兴有游客回来了！不会取消花了一年时间计划的旅行！我们的旅行顺利进行，现在我们有了终生难忘的回忆。我们已经在计划下一次冒险！",
+                "review.2": "我想让你知道，这次旅行非常棒，一切都很顺利！你推荐的酒店和旅游都很出色！酒店的位置特别理想。Milcah如约安排了提前计划的狩猎驱车体验，对我们来说非常特别。此外，旅行计划让一切变得非常简单。我们都可以查看每天的计划。",
+                "review.3": "我们刚从迪拜回来，想向你表示衷心的感谢，感谢你帮助我们组织旅行。这确实是一次终生难忘的旅行，我们非常感激和感激你所做的工作，让它如此神奇。作为一对独立旅行多年、自己预订行程并在途中即兴解决问题的人，我现在看到了经验丰富的专业旅行代理人对旅行的巨大影响。我们对迪拜25周年纪念旅行的结果感到非常满意。你对我们提出的许多选择和建议都非常准确。",
+                "review.4": "谢谢你，Milcah！我们刚从你推荐的马尔代夫旅行回来，和Linda Sim和David Talek一起。这个旅行不仅在花园、酒店、餐饮等方面令人惊叹，而且团队合作愉快，主要由来自我们附近地区的人组成。从整体上看，亮点是导游，他们是超级明星，以专业而热情的态度满足了每个人的愿望。感谢你为我们推荐这个旅行...真的是一次值得铭记的旅行。我们期待着与Milcah合作下一次冒险！",
+                "review.5": "嗨，Milcah和Dennis，谢谢你们的关心！老实说，肯尼亚远远超出了我们的期望，这个国家美丽而人民友好。我们真的爱上了它，并期待有一天能再回来...也许是更多的狩猎和冒险假期！我们对你和你的团队帮助我们打造梦想假期感到非常满意。谢谢你们的一切！",
+                "review.6": "Milcah非常好合作！她帮助安排了许多旅行场合。她对请求的响应非常迅速，并帮助我们制定了很棒的假期计划。",
+                "review.7": "通过你们预订非常简单，让我们的生活轻松了很多。我没有什么不好的评价！谢谢你们在我们出发前提供的建议和指导，这非常有帮助！再次感谢。",
+                "review.8": "你们做得非常出色。没有任何问题。再次感谢你们为这个旅行的计划所做的一切。",
+                "review.9": "Milcah在整个过程中都很出色，从计划到旅行中的更新。我们有11个人，一切都执行得非常完美。我们非常感谢她的辛勤工作。这真的是一次终生难忘的旅行。谢谢！",
+                "review.10": "哇，哇，哇！我是不是太过赞美Milcah和团队了？两次都经历了惊人的体验。生命短暂；赶快去体验一次终生难忘的经历。Milden Travel是我用过的最好的奢华旅行社。如果你在寻找世界上最美丽地方的史诗般的住宿 - Milcah和团队非常专业，他们的合作关系和个人联系将确保你获得尊贵的问候、服务、认可，甚至可能还有礼物！我们在肯尼亚和东非使用了Milcah。哦，我有没有提到他们能为我们提供比Expedia更低的价格！",
+                "review.rate": "写评论",
+                "review.rate1": "用户名（可选）：",
+                "review.rate2": "写下你的评论",
+                "review.rate3": "评价我们的服务：",
+                "category.b": "在晶莹剔透的海水和豪华度假村中放松身心。",
+                "category.h1": "自然徒步",
+                "section.header": "精选目的地",
+                "choice.h": "为什么选择我们：",
+                "choice.1": "我们倾听客户的目标和愿望，提供定制的假期目的地。我们富有创新精神并热爱工作，总是寻找新的方式来丰富您的狩猎和假期体验。高质量服务：我们的团队努力工作，确保您的假期体验超出您的期望。我们始终按时交付：我们真正理解时间在商业中的价值，并遵守截止日期，按时交付所有项目。",
+                "choice.2": "我们的合作伙伴和会员",
+                "safari.h": "狩猎冒险",
+                "safari.b": "近距离接触非洲雄伟的野生动物，感受它们在自然栖息地中的生活。",
+                "category.h": "海滩度假",
+                "category.b": "在晶莹剔透的海水和豪华度假村中放松身心。",
+                "category.h1": "自然徒步",
+                "category.h2": "探索从稀树草原到山脉和森林的多样化景观。",
+                "category.h3": "豪华小屋",
+                "category.h4": "在舒适与野性相结合的精美住宿中度过难忘时光。",
+                "hero.title": "探索稀树草原与海滩的野性之美",
+                "hero.subtitle": "体验非洲狩猎之旅的刺激，漫步洁白海滩，尽享我们精心打造的旅游套餐。",
+                "hero.button": "开始您的旅程",
+
+                "search.placeholder": "搜索目的地...",
+                "search.minprice": "最低价格",
+                "search.maxPrice": "最高价格",
+                "features.guides.title": "当地向导",
+                "features.guides.description": "与经验丰富的当地向导联系，他们将向您展示每个目的地的隐藏宝藏和真实体验。",
+                "features.translation.title": "实时翻译",
+                "features.translation.description": "使用我们的即时翻译工具克服语言障碍，适用于菜单、标志和对话。",
+                "features.itinerary.title": "定制行程",
+                "features.itinerary.description": "根据您的兴趣、预算和偏好的旅行节奏量身定制的个性化旅行计划。",
+                "testimonials.title": "旅行者体验",
+                "testimonials.one": "这个应用彻底改变了我在中国的旅行。我可以轻松导航和交流！",
+                "testimonials.one.location": "东京，日本",
+                "testimonials.two": "作为坦桑尼亚的独自旅行者，语言支持让我有信心独自探索。",
+                "testimonials.two.location": "内罗毕，肯尼亚",
+                "testimonials.three": "文化提示帮助我避免了尴尬的错误，更好地与当地人交流。",
+                "testimonials.three.location": "巴塞罗那，西班牙",
+                "footer.about": "关于我们",
+                "footer.aboutText": '我们热衷于让每个人都能无障碍、有意义地旅行，无论语言障碍如何。',
+                'footer.links': '快速链接',
+                'footer.home': '首页',
+                'footer.services': '服务',
+                'footer.destinations': '目的地',
+                'footer.blog': '旅游博客',
+                'footer.contact': '联系我们',
+                'footer.address': '全球旅游街123号，世界城市',
+                'footer.newsletter': '订阅通讯',
+                'footer.newsletterText': '订阅获取旅游提示和独家优惠。',
+                'footer.subscribe': '订阅',
+                'footer.rights': '版权所有。'
+            },
+            sa: {
+                "intro.23":"استكشف المناظر الطبيعية المتنوعة في كينيا، من الشواطئ البكر إلى محميات الحياة البرية المهيبة.",
+                "mountain":"الجبال",
+                "luxury":"فخامة",
+                "safari":"سفاري ",
+                "beach":"الشواطئ",
+                "destination":"جميع الوجهات",
+                "travel":"تأمين السفر",
+                "policy":"سياسة الخصوصية",
+                "contact":"اتصل بنا",
+                "terms":"شروط الحجز",
+                "faq":"الأسئلة الشائعة",
+                "support":"الدعم",
+                "safari.titles":"تجارب السفر",
+                "comp.env":"شريكك السياحي الأول لتجارب السافانا والشواطئ التي لا تُنسى في إفريقيا وخارجها.",
+                "tour.Europe":"انطلق في جولة أوروبية كبرى لمدة 12 يومًا عبر أروع الوجهات في فرنسا، إيطاليا، وسويسرا. استمتع بسحر برج إيفل المتوهج في باريس، واكتشف الكولوسيوم العريق في روما، وانعم بجولة رومانسية في قنوات فينيسيا. تأمل روعة جبال الألب السويسرية في لوسيرن وزيورخ، حيث تلتقي الأناقة بروح المغامرة الجبلية.",
+                "tour.jordan":"استمتع بجمال الأردن الخالد، من مدينة البتراء الوردية إلى مناظر وادي رم الخيالية. تجوّل في الأخاديد القديمة، وتأمّل النجوم في مخيمات الصحراء، وطفو على مياه البحر الميت العلاجية. من المعالم التاريخية إلى كرم الضيافة البدوي، كل لحظة مليئة بالدهشة والدفء.",
+                "tour.dubai":"اختبر مزيج الإمارات المذهل من الفخامة العصرية والتراث الثقافي في دبي وأبوظبي. اندهش من ناطحات السحاب المستقبلية، والصحارى الذهبية، وفخامة مسجد الشيخ زايد الكبير. من مغامرات الكثبان الرملية المثيرة إلى التسوق العالمي، إنها رحلة من الترف الخالص.",
+                "tour.uganda":"انطلق في مغامرة إلى غابات أوغندا الكثيفة لتجربة لا تُنسى في تتبع الغوريلا في بويندي. اشعر بالإثارة عند لقاء الغوريلا الجبلية والحياة البرية المتنوعة عن قرب. استرخِ في رحلة نهرية خلابة على النيل في شلالات مورشيسون، حيث تلتقي المغامرة بالهدوء.",
+                "tour.egypt":"اكتشف عجائب مصر القديمة عبر رحلة على ضفاف نهر النيل الخالد. تأمل أهرامات الجيزة، ومعابد الأقصر العظيمة، والمقابر الملكية في وادي الملوك. من صخب القاهرة إلى رحلات الفلوكة الهادئة، مصر أرض الأساطير والعظمة.",
+                "tour.africa":"انطلق في رحلة عبر جنوب إفريقيا من شوارع كيب تاون النابضة بالحياة إلى براري منتزه كروغر الوطني. استمتع بالنبيذ العالمي، والسواحل الخلابة، ورحلات السفاري المثيرة لرؤية الحيوانات الخمسة الكبرى. من جبل الطاولة إلى السافانا الجامحة، إنها أرض التناقضات والجمال الذي لا يُنسى.",
+                "tour.mara":"انطلق في مغامرة سفاري كلاسيكية في كينيا عبر سهول ماساي مارا وبحيرة نيفاشا. شاهد الحيوانات الخمسة الكبرى، والثقافة القبلية النابضة، وغروب الشمس الذهبي فوق السهول. استرخِ على شواطئ دياني النقية، حيث تلتقي المياه الفيروزية بسحر السواحلي.",
+                "tour.peru":"اكتشف عجائب بيرو القديمة، الأسواق النابضة بالحياة، ومناظر جبال الأنديز الخلابة. تذوّق الأطباق التقليدية مثل السيفيتشي، واستكشف التراث الإنكي الغني في كل خطوة. من أطلال ماتشو بيتشو الغامضة إلى شوارع كوسكو الملونة، المغامرة بانتظارك.",
+                "tour.america":"استكشف الساحل الشرقي للولايات المتحدة من خلال معالمه الشهيرة، مدنه التاريخية، وسواحله الخلابة. استمتع بطاقة نيويورك السريعة، وسحر بوسطن الاستعماري، ومعالم واشنطن العاصمة. من الشوارع المزدحمة إلى الموانئ الهادئة، إنها رحلة عبر جذور التراث الأمريكي. ",
+                "tour.asia":"اختبر قلب جنوب آسيا النابض من خلال مهرجانات الهند الملونة، القصور المهيبة، والأنهار المقدسة.استمتع بالتوابل العطرية، والكاري الغني بالنكهات، ودفء الضيافة المحلية. من فخامة تاج محل إلى المياه الهادئة في كيرالا، كل لحظة هي وليمة ثقافية.",
+                "tour.japan":"اكتشف مدن اليابان المستقبلية، ومعابدها الهادئة، وتقاليدها الخالدة في كل زاوية. تذوّق السوشي الأصيل، وطقوس الشاي، ونكهات أطعمة الشوارع النابضة في أوساكا. من أضواء طوكيو النيونية إلى أضرحة كيوتو الهادئة، إنها رحلة من التناقضات والدهشة.",
+                "re.bok":"طلب عرض سعر",
+                "re.de":"سنتواصل معك خلال 24 ساعة لمناقشة الجولة.",
+                "re.details":" تفاصيل إضافية",
+                "Adresse e-mail":"عنوان البريد الإلكتروني",
+                "re.fullname":"الاسم الكامل",
+                "bookk":" احجز الآن",
+                "opening_header":"اكتشف قصتنا",
+                "opening1":"في Milden Adventures، نصمم رحلات لا تُنسى تربطك بأجمل الوجهات في العالم. وبفضل أكثر من عقد من الخبرة، نحول أحلام السفر إلى حقيقة.",
+                "header.nav1": "الرئيسية",
+                "header.nav2": "الوجهات",
+                "header.nav3": "جولات السفاري",
+                "header.nav4": "منتجعات الشاطئ",
+                "header.nav5": "من نحن",
+                "header.nav6": "اتصل بنا",
+                "hero.title": "اكتشف جمال السافانا والشواطئ البرية",
+                "hero.subtitle": "اختبر إثارة رحلات السفاري الأفريقية واسترخ على الشواطئ البكر مع جولاتنا وحزم السفر المصممة باحتراف.",
+                "hero.button": "استكشف الآن",
+                "choice.h": "لماذا تختارنا:",
+                "choice.1": "نحن نستمع إلى أهداف عملائنا وطموحاتهم، ونقدم وجهات عطلات مخصصة. نحن مبتكرون وشغوفون بعملنا، دائمًا نبحث عن طرق جديدة لإثراء تجاربك في السفاري والعطلات. خدمات عالية الجودة: يعمل فريقنا المتفاني بجد لضمان أن تجارب عطلتك تتجاوز توقعاتك. نحن دائمًا نقدم في الوقت المحدد: نحن نفهم حقًا قيمة الوقت في الأعمال ونلتزم بالمواعيد النهائية، مما يضمن تسليم جميع المشاريع في الوقت المحدد.",
+                "choice.2": "شركاؤنا وعضوياتنا",
+                "safari.h": "مغامرات السفاري",
+                "safari.b": "اقترب من الحياة البرية الأفريقية الرائعة في موائلها الطبيعية.",
+                "category.h": "هروب الشاطئ",
+                "category.b": "استرخ على الشواطئ البكر ذات المياه الصافية والمنتجعات الفاخرة.",
+                "category.h1": "رحلات الطبيعة",
+                "category.h2": "استكشف المناظر الطبيعية المتنوعة من السافانا إلى الجبال والغابات.",
+                "category.h3": "نزل فاخرة",
+                "category.h4": "أقم في أماكن إقامة رائعة تجمع بين الراحة والطبيعة.",
+                "review": "ماذا يقول عملاؤنا:",
+                "review.1": "سافرت عائلتنا المكونة من 10 أشخاص إلى حديقة تسافو الوطنية خلال عطلة 2024 وكانت الرحلة رائعة! ساعدنا دينيس وملتشا في تنظيم جميع التفاصيل وسارت الأمور بسلاسة. تذاكر الطيران من عدة مدن، والنقل، وغرف الفنادق المتعددة، وبروتوكولات اختبار كوفيد - كل شيء كان مثاليًا. كان وايت ساندز منتجعًا شاملًا رائعًا وجميلًا لفرقنا الكبيرة والمتنوعة. كان الموظفون هناك والعاملون في رحلاتنا ودودين ومتعاونين للغاية. أعتقد أنهم سعداء جدًا بعودة السياح! لن نلغي رحلة استغرقت عامًا للتخطيط! سارت رحلتنا دون أي مشاكل والآن لدينا ذكريات مدى الحياة من وقتنا معًا. نحن بالفعل نخطط لمغامرتنا القادمة!",
+                "review.2": "أردت فقط أن أخبرك أن الرحلة كانت رائعة وكل شيء سار بسلاسة! كانت الفنادق والجولات التي أوصيت بها ممتازة! كانت مواقع الفنادق مثالية بشكل خاص. قامت ملتشا بتنظيم رحلات السفاري كما وعدت، وكانت تلك التجربة خاصة جدًا بالنسبة لنا. أيضًا، جعلت خطة الرحلة الأمور سهلة جدًا بالنسبة لنا. كان من الجيد أن نتمكن جميعًا من الاطلاع على الخطة اليومية المجدولة.",
+                "review.3": "عدنا من دبي وأردنا أن نعبر عن شكرنا العميق لمساعدتنا في تنظيم رحلتنا. كانت حقًا رحلة العمر ونحن ممتنون جدًا للعمل الذي قمت به لجعلها سحرية. كزوجين قضيا سنوات في السفر بشكل مستقل، وحجز الأشياء بأنفسنا وحل المشكلات على الطريق، أرى الآن التأثير الرائع لوكيل السفر المحترف وذو الخبرة على الرحلة. لم نكن أكثر رضا عن نتيجة رحلتنا الخاصة بمناسبة الذكرى الخامسة والعشرين في دبي. كنت دقيقًا في العديد من الخيارات والتوصيات التي قدمتها لنا.",
+                "review.4": "شكرًا لك ملتشا! عدنا للتو من الرحلة الرائعة التي أوصيت بها إلى جزر المالديف مع ليندا سيم وديفيد تالاك. لم يكن الرحلة مذهلة فقط في اختيار الحدائق والفنادق والوجبات... أوه الوجبات!... ولكن المجموعة كانت تعاونية ومثيرة للاهتمام بشكل كبير حيث كانت تتكون أساسًا من أشخاص من مناطق قريبة منا. كانت النقطة البارزة من منظور عام هي المرشدون، فهم نجوم خارقة وقد جعلوا رغبات الجميع تتحقق بشخصياتهم المهنية والدافئة. شكرًا لك على اقتراح هذا لنا... حقًا رحلة لا تُنسى لأسباب جيدة. نتطلع للعمل مع ملتشا في مغامرتنا القادمة!",
+                "review.5": "مرحبًا ملتشا ودينيس، شكرًا على المتابعة! بصراحة، كينيا تجاوزت توقعاتنا بكثير، ما بلد جميل مع شعب جميل. لقد وقعنا في حبها حقًا ونتطلع للعودة يومًا ما... ربما لمزيد من السفاري وعطلات المغامرة! نحن سعداء جدًا وراضون عن كيفية مساعدتك وفريقك في بناء عطلتنا الحلم. شكرًا على كل شيء!",
+                "review.6": "ملتشا رائعة للعمل معها! لقد ساعدت في العديد من المناسبات السفرية. إنها تستجيب بسرعة كبيرة للطلبات وساعدت في وضع خطط عطلة رائعة لي ولعائلتي.",
+                "review.7": "الحجز من خلالك كان سهلاً جدًا وجعل حياتنا أسهل بكثير. ليس لدي أي شيء سلبي لأقوله! شكرًا لك على تقديم النصائح والإرشادات قبل مغادرتنا حول ما يجب إحضاره وما إلى ذلك، كان ذلك مفيدًا جدًا! شكرًا مرة أخرى.",
+                "review.8": "لقد قمت بعمل رائع. لم تكن هناك أي مشاكل. شكرًا مرة أخرى على كل عملك في تخطيط هذه الرحلة.",
+                "review.9": "كانت ملتشا رائعة طوال العملية من التخطيط إلى التحديثات أثناء الرحلة. كان لدينا 11 شخصًا وكل شيء تم تنفيذه بشكل مثالي. نحن نقدر كل جهدها. كانت حقًا رحلة العمر. شكرًا لك!",
+                "review.10": "واو، واو، واو! هل أفرطت في الإعجاب بمدى روعة ملتشا والفريق؟ تجربتان مذهلتان من أصل اثنين. الحياة قصيرة؛ انطلق في تجارب لا تُنسى مرة واحدة في العمر. ميلدن ترافيل هي أفضل وكالة سفر فاخرة استخدمتها على الإطلاق. إذا كنت تبحث عن إقامات ملحمية في أجمل الأماكن في العالم - فإن ملتشا والفريق على دراية كبيرة واتصالاتهم الشخصية ستضمن لك تحية مميزة وخدمة واعترافًا وربما حتى هدايا! لقد استخدمنا ملتشا لإقاماتنا في كينيا وشرق إفريقيا بشكل عام. أوه، هل ذكرت أنهم تمكنوا من الحصول على أسعار أقل من إكسبيديا لنا؟!",
+                "review.rate": "اكتب مراجعة",
+                "review.rate1": "اسم المستخدم (اختياري):",
+                "review.rate2": "اكتب مراجعتك",
+                "review.rate3": "قيم خدماتنا:",
+                "hero.title": "استكشف جمال السافانا والشواطئ البرية",
+                "search.placeholder": "ابحث عن الوجهات...",
+                "search.minprice": "الحد الأدنى للسعر",
+                "search.maxPrice": "الحد الأقصى للسعر",
+                "section.header": "الوجهات المميزة",
+                "features.title": "خدماتنا السياحية",
+                "features.guides.title": "مرشدون محليون",
+                "features.guides.description": "تواصل مع مرشدين محليين ذوي خبرة سيظهرون لك الجواهر الخفية والتجارب الأصيلة في كل وجهة.",
+                "features.translation.title": "ترجمة فورية",
+                "features.translation.description": "تجاوز حواجز اللغة مع أدوات الترجمة الفورية لدينا للقوائم واللافتات والمحادثات.",
+                "features.itinerary.title": "مسارات مخصصة",
+                "features.itinerary.description": "خطط سفر مخصصة مصممة وفقًا لاهتماماتك وميزانيتك وإيقاع سفرك المفضل.",
+                "testimonials.title": "تجارب المسافرين",
+                "testimonials.one": 'حول هذا التطبيق رحلتي إلى الصين. استطعت التنقل والتواصل بسهولة!',
+                "testimonials.one.location": 'طوكيو، اليابان',
+                "testimonials.two": 'كمسافر منفرد في تنزانيا، أعطتني دعم اللغة ثقة كبيرة لاستكشاف المكان بمفردي.',
+                "testimonials.two.location": 'نيروبي، كينيا',
+                "testimonials.three": 'ساعدتني النصائح الثقافية في تجنب الأخطاء المحرجة والتواصل بشكل أفضل مع السكان المحليين.',
+                "testimonials.three.location": 'برشلونة، إسبانيا',
+                'footer.about': 'عن الشركة',
+                'footer.aboutText': 'نحن شغوفون بجعل السفر متاحًا وذو مغزى للجميع، بغض النظر عن حواجز اللغة.',
+                'footer.links': 'روابط سريعة',
+                'footer.home': 'الرئيسية',
+                'footer.services': 'الخدمات',
+                "re.title":"طلب عرض سعر",
+                'footer.destinations': 'الوجهات',
+                'footer.blog': 'مدونة السفر',
+                'footer.contact': 'اتصل بنا',
+                'footer.address': '123 شارع السفر العالمي، مدينة العالم',
+                'footer.newsletter': 'اشتراك في النشرة الإخبارية',
+                'footer.newsletterText': 'اشترك للحصول على نصائح السفر وعروض حصرية.',
+                'footer.subscribe': 'اشترك',
+                'footer.rights': 'جميع الحقوق محفوظة.'
+            },
+            de:{
+                "intro.23":"Entdecken Sie Kenias vielfältige Landschaften – von unberührten Stränden bis zu majestätischen Wildreservaten.",
+                "mountain":"Berge",
+                "luxury":"Luxus",
+                "safari":"Safari",
+                "beach":"Strände",
+                "destination":"Alle Reiseziele",
+                "travel":"Reiseversicherung",
+                "policy":"Datenschutzrichtlinie",
+                "contact":"Kontakt",
+                "terms":"Buchungsbedingungen",
+                "faq":"Häufige Fragen",
+                "support":"Support",
+                "safari.titles":"Reiseerlebnisse",
+                "comp.env":"Ihr erstklassiger Reisepartner für unvergessliche Safari- und Strandabenteuer in Afrika und darüber hinaus.",
+                "tour.Europe":"Begeben Sie sich auf eine 12-tägige Grand Tour durch Europas bezauberndste Reiseziele in Frankreich, Italien und der Schweiz. Bewundern Sie den Glanz des Eiffelturms in Paris, erkunden Sie das antike Kolosseum in Rom und gleiten Sie durch die romantischen Kanäle Venedigs. Staunen Sie über die majestätischen Schweizer Alpen in Luzern und Zürich – wo Eleganz auf alpine Abenteuer trifft.",
+                "tour.jordan":"Tauchen Sie ein in Jordaniens zeitlose Schönheit – von der rosaroten Felsenstadt Petra bis zu den surrealen Landschaften von Wadi Rum. Wandern Sie durch uralte Schluchten, beobachten Sie die Sterne in Wüstencamps und schweben Sie im heilenden Wasser des Toten Meeres. Von historischen Wundern bis zur beduinischen Gastfreundschaft – jeder Moment ist voller Staunen und Herzlichkeit.",
+                "tour.dubai":"Erleben Sie die atemberaubende Mischung aus modernem Luxus und kulturellem Erbe der VAE in Dubai und Abu Dhabi. Bestaunen Sie futuristische Wolkenkratzer, goldene Wüsten und die Pracht der Sheikh-Zayed-Moschee. Von aufregenden Dünenabenteuern bis hin zu Shopping der Spitzenklasse – eine Reise voller purer Verwöhnung.",
+                "tour.uganda":"Wagen Sie sich in Ugandas üppige Dschungel und erleben Sie ein unvergessliches Gorilla-Trekking-Abenteuer im Bwindi-Wald. Spüren Sie den Nervenkitzel hautnaher Begegnungen mit Berggorillas und vielfältiger Tierwelt. Entspannen Sie bei einer malerischen Nilkreuzfahrt in den Murchison Falls – wo Abenteuer auf Ruhe trifft.",
+                "tour.egypt":"Entdecken Sie die alten Wunder Ägyptens auf einer Reise entlang des zeitlosen Nils. Bestaunen Sie die Pyramiden von Gizeh, die großartigen Tempel von Luxor und die königlichen Gräber im Tal der Könige. Von der geschäftigen Metropole Kairo bis zu den ruhigen Felukenfahrten – Ägypten ist ein Land voller Mythen und Majestät. ",
+                "tour.africa":"Reisen Sie durch Südafrika – von den lebendigen Straßen Kapstadts bis zu den wilden Regionen des Kruger-Nationalparks. Genießen Sie erstklassige Weine, dramatische Küstenlandschaften und aufregende Big-Five-Safaris. Von der Tafelberg bis zu ungezähmten Savannen – ein Land voller Kontraste und unvergesslicher Schönheit.",
+                "tour.mara":"Begeben Sie sich auf ein klassisches Safari-Abenteuer in Kenia durch die Savannen der Maasai Mara und des Lake Naivasha. Beobachten Sie die Big Five, erleben Sie die lebendige Stammeskultur und genießen Sie goldene Sonnenuntergänge über den Ebenen. Entspannen Sie an den unberührten Stränden von Diani, wo türkisfarbenes Wasser auf den Swahili-Charme trifft.",
+                "tour.peru":"Entdecken Sie die alten Wunder Perus, lebhafte Märkte und atemberaubende Landschaften der Anden. Genießen Sie traditionelle Gerichte wie Ceviche und erleben Sie das reiche Inka-Erbe auf Schritt und Tritt. Von den mystischen Ruinen von Machu Picchu bis zu den farbenfrohen Straßen von Cusco – das Abenteuer wartet.",
+                "tour.america":"Entdecken Sie die Ostküste der USA mit ihren ikonischen Wahrzeichen, historischen Städten und malerischen Küstenlandschaften. Genießen Sie New Yorks rasantes Tempo, Bostons kolonialen Charme und die Denkmäler Washington D.C.s. Von geschäftigen Straßen bis zu ruhigen Häfen – eine Reise zu den Wurzeln des amerikanischen Erbes.",
+                "tour.asia":"Erleben Sie das pulsierende Herz Südasiens durch Indiens farbenfrohe Feste, majestätische Paläste und heilige Flüsse. Genießen Sie aromatische Gewürze, würzige Currys und die Herzlichkeit der lokalen Gastfreundschaft. Von der Pracht des Taj Mahal bis zu den ruhigen Backwaters von Kerala – jeder Moment ist ein kulturelles Fest.",
+                "tour.japan":"Entdecken Sie Japans futuristische Städte, ruhige Tempel und zeitlose Traditionen an jeder Ecke. Genießen Sie authentisches Sushi, Teezeremonien und die lebendigen Aromen des Streetfoods in Osaka. Von Tokios Neonlichtern bis zu Kyotos stillen Schreinen – eine Reise voller Kontraste und Wunder.",
+                "re.bok":"Angebot anfordern",
+                "re.de":"Wir werden Sie innerhalb von 24 Stunden kontaktieren, um die Tour zu besprechen.",
+                "re.details":"Zusätzliche Angaben",
+                "Adresse e-mail":"E-Mail-Adresse",
+                "re.fullname":"Vollständiger Name",
+                "re.title":"Angebot anfordern",
+                "bookk":" Jetzt buchen",
+                "opening_header":"Entdecken Sie unsere Geschichte",
+                "opening1":"Bei Milden Adventures gestalten wir unvergessliche Reisen, die Sie mit den atemberaubendsten Reisezielen der Welt verbinden. Mit über einem Jahrzehnt Erfahrung machen wir Ihre Reiseträume wahr.",
+                "header.nav1": "Startseite",
+                "header.nav2": "Reiseziele",
+                "header.nav3": "Safari-Touren",
+                "header.nav4": "Strandresorts",
+                "header.nav5": "Über uns",
+                "header.nav6": "Kontakt",
+                "hero.title": "Entdecken Sie die wilde Schönheit der Savanne und Strände",
+                "hero.subtitle": "Erleben Sie den Nervenkitzel afrikanischer Safaris und entspannen Sie an unberührten Stränden mit unseren professionell gestalteten Touren und Reisepaketen.",
+                "hero.button": "Jetzt erkunden",
+                "section.header": "Empfohlene Reiseziele",
+                "features.title": "Unsere Reiseangebote",
+                "features.guides.title": "Lokale Guides",
+                "choice.h": "Warum uns wählen:",
+                "choice.1": "Wir hören auf die Ziele und Wünsche unserer Kunden und bieten maßgeschneiderte Urlaubsziele an. Wir sind innovativ und leidenschaftlich bei unserer Arbeit und suchen immer nach neuen Wegen, um Ihre Safari- und Urlaubserlebnisse zu bereichern. Hochwertige Dienstleistungen: Unser engagiertes Team arbeitet hart daran, sicherzustellen, dass Ihre Urlaubserlebnisse Ihre Erwartungen übertreffen. Wir liefern immer pünktlich: Wir verstehen den Wert von Zeit im Geschäft wirklich und halten Fristen ein, indem wir alle Projekte pünktlich liefern.",
+                "choice.2": "Unsere Partner und Mitgliedschaften",
+                "safari.h": "Safari-Abenteuer",
+                "safari.b": "Erleben Sie die majestätische Tierwelt Afrikas hautnah in ihrem natürlichen Lebensraum.",
+                "category.h": "Strandfluchten",
+                "category.b": "Entspannen Sie an unberührten Stränden mit kristallklarem Wasser und luxuriösen Resorts.",
+                "category.h1": "Naturwanderungen",
+                "category.h2": "Entdecken Sie vielfältige Landschaften von Savannen bis zu Bergen und Wäldern.",
+                "category.h3": "Luxuslodges",
+                "category.h4": "Übernachten Sie in exquisiten Unterkünften, die Komfort mit Wildnis verbinden.",
+                "hero.title": "Entdecken Sie die wilde Schönheit der Savanne und Strände",
+                "review": "Was unsere Kunden sagen:",
+                "review.1": "Unsere 10-köpfige Familie reiste während der Ferien 2024 in den Tsavo-Nationalpark und die Reise war wunderbar! Dennis und Milcah halfen bei der Organisation aller Details und alles lief wie am Schnürchen. Flüge aus mehreren Städten, Transfers, mehrere Hotelzimmer, COVID-Testprotokolle - alles war perfekt. Das White Sands war ein wunderschöner All-Inclusive-Ort, der für unser großes und vielfältiges Team geeignet war. Das Personal dort und die Mitarbeiter bei unseren Touren waren alle freundlich und hilfsbereit. Ich denke, sie sind so froh, Touristen zurück zu haben! Keine Stornierung einer Reise, die ein Jahr in Planung war! Unsere Reise verlief reibungslos und jetzt haben wir lebenslange Erinnerungen an unsere gemeinsame Zeit. Wir planen bereits unser nächstes Abenteuer!",
+                "review.2": "Ich wollte dir nur sagen, dass die Reise fantastisch war und alles reibungslos verlief! Die Hotels und Touren, die du empfohlen hast, waren ausgezeichnet! Die Standorte der Hotels waren besonders ideal. Milcah hielt ihr Versprechen mit den im Voraus geplanten Safaris, und diese Erfahrung war sehr speziell für uns. Außerdem machte der Reiseplan die Dinge für uns sehr einfach. Es war schön, dass wir alle den täglichen Plan einsehen konnten.",
+                "review.3": "Wir sind gerade aus Dubai zurückgekehrt und wollten dir unseren aufrichtigen Dank aussprechen, dass du uns bei der Organisation unserer Reise geholfen hast. Es war wirklich die Reise unseres Lebens und wir sind so dankbar und schätzen die Arbeit, die du geleistet hast, um sie so magisch zu machen. Als Paar, das jahrelang unabhängig gereist ist, Dinge selbst gebucht und unterwegs improvisiert hat, sehe ich jetzt den unglaublichen Einfluss eines erfahrenen und professionellen Reiseberaters auf eine Reise. Wir hätten mit dem Ergebnis unserer speziellen 25-jährigen Jubiläumsreise nach Dubai nicht zufriedener sein können. Du warst perfekt mit vielen der Optionen und Empfehlungen, die du uns gegeben hast.",
+                "review.4": "Danke Milcah! Wir sind gerade von der wunderbaren Reise zurückgekehrt, die du uns zu den Malediven mit Linda Sim und David Talek empfohlen hast. Nicht nur, dass die Reise in Bezug auf Gärten, Hotels, Essen... oh das Essen!... atemberaubend war, sondern die Gruppe war kooperativ und sehr interessant, da sie hauptsächlich aus Menschen aus nahegelegenen Regionen bestand. Der Höhepunkt aus einer allgemeinen Perspektive waren die Guides, sie sind Superstars und haben mit ihrer professionellen und herzlichen Art die Wünsche aller erfüllt. Danke, dass du uns das vorgeschlagen hast... wirklich eine unvergessliche Reise aus all den guten Gründen. Wir freuen uns darauf, mit Milcah an unserem nächsten Abenteuer zu arbeiten!",
+                "review.5": "Hallo Milcah und Dennis, danke, dass ihr nachgefragt habt! Ehrlich gesagt hat Kenia unsere Erwartungen bei weitem übertroffen, was für ein schönes Land mit schönen Menschen. Wir haben uns wirklich in dieses Land verliebt und freuen uns darauf, eines Tages zurückzukehren... vielleicht für mehr Safari- und Abenteuerurlaube! Wir sind sehr glücklich und zufrieden damit, wie du und dein Team uns geholfen habt, unseren Traumurlaub zu gestalten. Danke für alles!",
+                "review.6": "Milcah ist großartig zu arbeiten! Sie hat bei vielen Reisegelegenheiten geholfen. Sie reagiert sehr schnell auf Anfragen und hat geholfen, großartige Urlaubspläne für mich und meine Familie zu erstellen.",
+                "review.7": "Die Buchung bei euch war sehr einfach und hat unser Leben so viel einfacher gemacht. Ich habe nichts Negatives zu sagen! Danke, dass ihr uns vor unserer Abreise Ratschläge und Anleitungen gegeben habt, was wir mitbringen sollten und so weiter, das war sehr hilfreich! Nochmals danke.",
+                "review.8": "Ihr habt großartige Arbeit geleistet. Es gab keine Probleme. Nochmals danke für all eure Arbeit bei der Planung dieser Reise.",
+                "review.9": "Milcah war während des gesamten Prozesses großartig, von der Planung bis zu den Updates während der Reise. Wir hatten 11 Personen und alles wurde perfekt umgesetzt. Wir schätzen all ihre harte Arbeit. Es war wirklich die Reise unseres Lebens. Danke!",
+                "review.10": "Wow, wow, wow! Habe ich zu viel geschwärmt, wie großartig Milcah und das Team sind? Zwei von zwei unglaublichen Erfahrungen. Das Leben ist kurz; stürzen Sie sich in einmalige Erlebnisse. Milden Travel ist die beste Luxusreiseagentur, die ich je genutzt habe. Wenn Sie nach epischen Aufenthalten an den schönsten Orten der Welt suchen - Milcah und das Team sind sehr kompetent und ihre Verbindungen und persönlichen Kontakte stellen sicher, dass Sie eine herzliche Begrüßung, Service, Anerkennung und vielleicht sogar Geschenke erhalten! Wir haben Milcah für unsere Aufenthalte in Kenia und Ostafrika im Allgemeinen genutzt. Oh, habe ich erwähnt, dass sie uns Preise unter denen von Expedia besorgt haben?!",
+                "review.rate": "Bewertung schreiben",
+                "review.rate1": "Benutzername (optional):",
+                "review.rate2": "Schreiben Sie Ihre Bewertung",
+                "review.rate3": "Bewerten Sie unsere Dienstleistungen:",
+                "category.b": "Entspannen Sie an unberührten Stränden mit kristallklarem Wasser und luxuriösen Resorts.",
+                "hero.title": "Entdecken Sie die wilde Schönheit der Savanne und Strände",
+                "search.placeholder": "Reiseziele suchen...",
+                "search.minprice": "Mindestpreis",
+                "search.maxPrice": "Höchstpreis",
+                "features.guides.description": "Verbinden Sie sich mit erfahrenen lokalen Guides, die Ihnen versteckte Schätze und authentische Erlebnisse in jedem Ziel zeigen.",
+                "features.translation.title": "Echtzeit-Übersetzung",
+                "features.translation.description": "Überwinden Sie Sprachbarrieren mit unseren Sofortübersetzungstools für Menüs, Schilder und Gespräche.",
+                "features.itinerary.title": "Individuelle Reiserouten",
+                "features.itinerary.description": "Personalisierte Reisepläne, die auf Ihre Interessen, Ihr Budget und Ihr bevorzugtes Reisetempo zugeschnitten sind.",
+                "testimonials.title": "Reisenderfahrungen",
+                "testimonials.one": 'Diese App hat meine Reise nach China revolutioniert. Ich konnte mich problemlos zurechtfinden und kommunizieren!',
+                "testimonials.one.location": 'Tokio, Japan',
+                "testimonials.two": 'Als Alleinreisender in Tansania gab mir die Sprachunterstützung großes Vertrauen, um selbstständig zu erkunden.',
+                "testimonials.two.location": 'Nairobi, Kenia',
+                "testimonials.three": 'Kulturelle Tipps halfen mir, peinliche Fehler zu vermeiden und besser mit Einheimischen zu interagieren.',
+                "testimonials.three.location": 'Barcelona, Spanien',
+                'footer.about': 'Über uns',
+                'footer.aboutText': 'Wir sind leidenschaftlich daran interessiert, Reisen für alle zugänglich und bedeutungsvoll zu machen, unabhängig von Sprachbarrieren.',
+
+            },
+                
+        };
+
+        // Set initial language
+        let currentLanguage = 'en';
+
+        // Function to apply translations
+        function applyTranslations(lang) {
+            currentLanguage = lang;
+            const langData = translations[lang];
+            
+            // Apply fade-in animation to all translatable elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                el.classList.add('fade-in');
+                setTimeout(() => el.classList.remove('fade-in'), 500);
+            });
+            
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (langData[key]) {
+                    element.textContent = langData[key];
+                }
+            });
+            
+            // Update language selector
+            document.getElementById('currentLanguage').textContent = 
+                lang === 'en' ? 'English' : 
+                lang === 'cn' ? '中文' : 
+                lang === 'fr' ? 'Français' :
+                lang === 'sa' ? 'العربية' :
+
+                'German' ;
+                
+            // Update flag
+            document.getElementById('currentFlag').style.backgroundImage = 
+                lang === 'en' ? "url('https://flagcdn.com/w40/gb.png')" : 
+                lang === 'cn' ? "url('https://flagcdn.com/w40/cn.png')" :
+                lang === 'fr' ? "url('https://flagcdn.com/w40/fr.png')" :
+                lang === 'sa' ? "url('https://flagcdn.com/w40/sa.png')" : 
+                
+                 "url('https://flagcdn.com/w40/de.png')" ;
+                
+        }
+
+        // Initialize language selector
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set initial language
+            applyTranslations(currentLanguage);
+            
+            // Language dropdown functionality
+            const languageDropdown = document.getElementById('languageDropdown');
+            const dropdownToggle = document.getElementById('dropdownToggle');
+            const dropdownItems = document.querySelectorAll('.dropdown-item');
+            
+            // Toggle dropdown visibility
+            dropdownToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                languageDropdown.classList.toggle('active');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!languageDropdown.contains(e.target)) {
+                    languageDropdown.classList.remove('active');
+                }
+            });
+            
+            // Handle language selection
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    applyTranslations(lang);
+                    languageDropdown.classList.remove('active');
+                });
+            });
+        });
+    </script>
+
+
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const whatsappButton = document.getElementById('whatsappButton');
+            
+            // Function to open WhatsApp chat
+            function openWhatsApp() {
+                // Phone number (in international format without '+' or '00')
+                const phoneNumber = '254724714640'; // Replace with your actual WhatsApp number
+                
+                // Default message (optional)
+                const defaultMessage = 'Hello! I need assistance with your service.';
+                
+                // Check if user is on a mobile device
+                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                
+                // Create the appropriate link based on device
+                let whatsappLink;
+                
+                if (isMobile) {
+                    // For mobile devices
+                    whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`;
+                } else {
+                    // For desktop devices - opens WhatsApp Web
+                    whatsappLink = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(defaultMessage)}`;
+                }
+                
+                // Open the link in a new tab
+                window.open(whatsappLink, '_blank');
+            }
+            
+            // Add click event to the button
+            whatsappButton.addEventListener('click', openWhatsApp);
+            
+            
+            
+          
+        });
+    </script>
+     <script>
+    function showPopup() {
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    function hidePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+
+    <script>
+        // Counter functionality for travelers
+        document.getElementById('adultPlus').addEventListener('click', function() {
+            const input = document.getElementById('adults');
+            if (parseInt(input.value) < 10) {
+                input.value = parseInt(input.value) + 1;
+            }
+        });
+        
+        document.getElementById('adultMinus').addEventListener('click', function() {
+            const input = document.getElementById('adults');
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        });
+        
+        document.getElementById('childPlus').addEventListener('click', function() {
+            const input = document.getElementById('children');
+            if (parseInt(input.value) < 10) {
+                input.value = parseInt(input.value) + 1;
+            }
+        });
+        
+        document.getElementById('childMinus').addEventListener('click', function() {
+            const input = document.getElementById('children');
+            if (parseInt(input.value) > 0) {
+                input.value = parseInt(input.value) - 1;
+            }
+        });
+        
+        // Set min date for date inputs to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('startDate').min = today;
+        document.getElementById('endDate').min = today;
+        
+        // Form validation and submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const firstName = document.getElementById('firstName').value;
+            const destination = document.getElementById('destination').value;
+    
+
+            this.reset();
+            document.getElementById('adults').value = 1;
+            document.getElementById('children').value = 0;
+        });
+        
+        // Update end date min when start date changes
+        document.getElementById('startDate').addEventListener('change', function() {
+            document.getElementById('endDate').min = this.value;
+        });
+    </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const stars = document.querySelectorAll('.star');
+    const ratingInput = document.getElementById('rating');
+    const form = document.getElementById('reviewForm');
+    const successMessage = document.querySelector('.success-message');
+
+    // Rating click logic
+    stars.forEach(star => {
+        star.addEventListener('click', function () {
+            const value = parseInt(this.getAttribute('data-value'));
+            ratingInput.value = value;
+
+            stars.forEach((s, index) => {
+                if (index < value) {
+                    s.classList.remove('far');
+                    s.classList.add('fas', 'active');
+                } else {
+                    s.classList.remove('fas', 'active');
+                    s.classList.add('far');
+                }
+            });
+        });
+    });
+
+    // Form submit via AJAX
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Stop normal form submission
+
+        const formData = new FormData(form);
+
+        fetch('review.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.text()) // Optional: Check response
+        .then(data => {
+            // Show message
+            successMessage.style.display = 'block';
+
+            // Hide after 3 seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+                form.reset();
+
+                // Reset stars to empty
+                stars.forEach(s => {
+                    s.classList.remove('fas', 'active');
+                    s.classList.add('far');
+                });
+
+                ratingInput.value = 0;
+            }, 3000);
+        })
+        .catch(error => {
+            alert("Something went wrong: " + error);
+        });
+    });
+});
+</script>
+
+
+     <script>
+      var divs = [];
+      var currentIndex = 0; 
+      var divElements = document.querySelectorAll('.display-div');
+      divElements.forEach(function(div) {
+        divs.push(div);
+      });
+      function toggleDivs() {
+        divs[currentIndex].classList.remove('slide-in');
+        divs[currentIndex].classList.add('slide-out');
+        currentIndex = (currentIndex + 1) % divs.length;
+        divs[currentIndex].classList.remove('slide-out');
+        divs[currentIndex].classList.add('slide-in');
+      }
+      setInterval(toggleDivs, 10000);
+    </script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const destinationCards = document.querySelectorAll('.destination-card');
+            const noResults = document.querySelector('.no-results');
+            
+            // Add active class to filter buttons
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get the filter value
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filter cards
+                    filterCards(filterValue);
+                });
+            });
+            
+            // Filter cards function
+            function filterCards(filter) {
+                let visibleCards = 0;
+                
+                destinationCards.forEach(card => {
+                    const categories = card.getAttribute('data-category').split(' ');
+                    
+                    if (filter === 'all' || categories.includes(filter)) {
+                        card.style.display = 'flex';
+                        visibleCards++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Show no results message if no cards are visible
+                if (visibleCards === 0) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            }
+            
+            // Add hover effect to cards
+            document.querySelectorAll('.destination-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Add click effect to buttons
+            document.querySelectorAll('.btn').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.innerHTML = 'loading... <i class="fas fa-spinner fa-spin"></i>';
+                    
+                    // Simulate loading
+                    setTimeout(() => {
+                        this.innerHTML = 'done <i class="fas fa-arrow-right"></i>';
+                        
+                    }, 1500);
+                });
+            });
+        });
+    </script>
+   
+    <script>
+        // Simple animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Animate sections when they come into view
+            document.querySelectorAll('.about-section, .stats-section, .values-section, .team-section, .testimonial-section').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        // Add active class to filter buttons
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+        
+        // Add hover effect to cards
+        document.querySelectorAll('.destination-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

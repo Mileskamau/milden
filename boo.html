@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Tours - Book Your Adventure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+      .container90 {
+    max-width: 1200px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+
+.top-popup90 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+        .left-section {
+            flex: 1;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/booking.jpeg');
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .left-section h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #fdbb2d;
+        }
+        
+        .left-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .benefits {
+            list-style: none;
+            margin-top: 30px;
+        }
+        
+        .benefits li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+        
+        .benefits i {
+            color: #fdbb2d;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        
+        .right-section {
+            flex: 1;
+            padding: 40px;
+        }
+        
+        .form-header30 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .form-header30 h2 {
+            font-size: 2.2rem;
+            color: #1a2a6c;
+            margin-bottom: 10px;
+        }
+        
+        .form-header30 p {
+            color: #666;
+        }
+        
+        .form-container30 {
+            width: 100%;
+        }
+        
+        .form-group30 {
+            margin-bottom: 25px;
+        }
+        
+        .form-group30 label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-group30 input,
+        .form-group30 select,
+        .form-group30 textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group30 input:focus,
+        .form-group30 select:focus,
+        .form-group30 textarea:focus {
+            border-color: #1a2a6c;
+            outline: none;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .form-row .form-group30 {
+            flex: 1;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(to right, #1a2a6c, #b21f1f);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .counter {
+            display: flex;
+            align-items: center;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .counter button {
+            width: 40px;
+            height: 40px;
+            background: #f5f5f5;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        
+        .counter input {
+            flex: 1;
+            border: none;
+            text-align: center;
+            padding: 0;
+        }
+        
+        .travelers {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .traveler-type {
+            flex: 1;
+        }
+        
+        @media (max-width: 900px) {
+            .container90 {
+                flex-direction: column;
+            }
+            
+            .left-section {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .form-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        
+        .required::after {
+            content: " *";
+            color: #e74c3c;
+        }
+         .close-btn2{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #888;
+            background: none;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .close-btn2:hover {
+            transform: rotate(100deg);
+            color: #ff0000;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showPopup()">show form</button>
+    
+    <div class="container90 top-popup90" id="popup" style="display: none;">
+        <div class="left-section">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Book your dream vacation with Global Tours. Explore breathtaking destinations with our expertly crafted travel experiences.</p>
+            
+            <ul class="benefits">
+                <li><i class="fas fa-check-circle"></i> Best price guarantee</li>
+                <li><i class="fas fa-check-circle"></i> No booking fees</li>
+                <li><i class="fas fa-check-circle"></i> 24/7 customer support</li>
+                <li><i class="fas fa-check-circle"></i> Flexible cancellation policy</li>
+                <li><i class="fas fa-check-circle"></i> Verified customer reviews</li>
+            </ul>
+        </div>
+        
+        <div class="right-section">
+
+            <div class="form-header30">
+                <h2>Book Your Tour</h2>
+                <p>Fill in the details below to reserve your spot</p>
+                <button class="close-btn2" id="closeBtn" onclick="hidePopup()">&times;</button>
+            </div>
+            
+            <div class="form-container30">
+                <form id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group30">
+                            <label for="firstName" class="required">First Name</label>
+                            <input type="text" id="firstName" placeholder="Enter your first name" required>
+                        </div>
+                        <div class="form-group30">
+                            <label for="lastName" class="required">Last Name</label>
+                            <input type="text" id="lastName" placeholder="Enter your last name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group30">
+                            <label for="email" class="required">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group30">
+                            <label for="phone" class="required">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group30">
+                        <label for="destination" class="required">Destination</label>
+                        <select id="destination" required>
+                            <option value="" disabled selected>Select a destination</option>
+                            <option value="paris">Paris, France</option>
+                            <option value="bali">Bali, Indonesia</option>
+                            <option value="kyoto">Kyoto, Japan</option>
+                            <option value="santorini">Santorini, Greece</option>
+                            <option value="maldives">Maldives</option>
+                            <option value="newyork">New York, USA</option>
+                            <option value="cairo">Cairo, Egypt</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group30">
+                            <label for="startDate" class="required">Start Date</label>
+                            <input type="date" id="startDate" required>
+                        </div>
+                        <div class="form-group30">
+                            <label for="endDate" class="required">End Date</label>
+                            <input type="date" id="endDate" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group30">
+                        <label class="required">Travelers</label>
+                        <div class="travelers">
+                            <div class="traveler-type">
+                                <label>Adults</label>
+                                <div class="counter">
+                                    <button type="button" id="adultMinus">-</button>
+                                    <input type="number" id="adults" value="1" min="1" max="10" readonly>
+                                    <button type="button" id="adultPlus">+</button>
+                                </div>
+                            </div>
+                            <div class="traveler-type">
+                                <label>Children</label>
+                                <div class="counter">
+                                    <button type="button" id="childMinus">-</button>
+                                    <input type="number" id="children" value="0" min="0" max="10" readonly>
+                                    <button type="button" id="childPlus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group30">
+                        <label for="accommodation">Accommodation Type</label>
+                        <select id="accommodation">
+                            <option value="standard">Standard (3-star)</option>
+                            <option value="deluxe" selected>Deluxe (4-star)</option>
+                            <option value="luxury">Luxury (5-star)</option>
+                            <option value="resort">Beach Resort</option>
+                            <option value="boutique">Boutique Hotel</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group30">
+                        <label for="specialRequests">Special Requests</label>
+                        <textarea id="specialRequests" rows="3" placeholder="Dietary restrictions, accessibility needs, etc."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Book Now </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function showPopup() {
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    function hidePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+
+    <script>
+        // Counter functionality for travelers
+        document.getElementById('adultPlus').addEventListener('click', function() {
+            const input = document.getElementById('adults');
+            if (parseInt(input.value) < 10) {
+                input.value = parseInt(input.value) + 1;
+            }
+        });
+        
+        document.getElementById('adultMinus').addEventListener('click', function() {
+            const input = document.getElementById('adults');
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        });
+        
+        document.getElementById('childPlus').addEventListener('click', function() {
+            const input = document.getElementById('children');
+            if (parseInt(input.value) < 10) {
+                input.value = parseInt(input.value) + 1;
+            }
+        });
+        
+        document.getElementById('childMinus').addEventListener('click', function() {
+            const input = document.getElementById('children');
+            if (parseInt(input.value) > 0) {
+                input.value = parseInt(input.value) - 1;
+            }
+        });
+        
+        // Set min date for date inputs to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('startDate').min = today;
+        document.getElementById('endDate').min = today;
+        
+        // Form validation and submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const firstName = document.getElementById('firstName').value;
+            const destination = document.getElementById('destination').value;
+    
+
+            this.reset();
+            document.getElementById('adults').value = 1;
+            document.getElementById('children').value = 0;
+        });
+        
+        // Update end date min when start date changes
+        document.getElementById('startDate').addEventListener('change', function() {
+            document.getElementById('endDate').min = this.value;
+        });
+    </script>
+</body>
+</html>

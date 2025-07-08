@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milden Adventures LIMITED</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+    <link rel="stylesheet" href="css/dest.css">
+    <link rel="stylesheet" href="css/dest2.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container1 navbar">
+
+            <a href="#" class="logo">
+                <img src="logo2.png" alt="logo image" style="width: 100px; height: 70px; margin-left: 10px;">
+                <span>Milden Adventures</span>
+            </a>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="header.nav1">Home</a></li>
+                <li><a href="#" data-i18n="header.nav2">Destinations</a></li>
+                
+                <li><a href="aboutus.html" data-i18n="header.nav5">About</a></li>
+                <li><a href="contacts.html" data-i18n="header.nav6">Contact</a></li>
+                <!--<li><div id="google_translate_element"></div></li>-->
+                <li>
+                    <div class="header-actions">
+                    
+                    
+                    <div class="language-dropdown" id="languageDropdown">
+                    <div class="dropdown-toggle" id="dropdownToggle">
+                        <div class="language-flag" id="currentFlag" style="background-image: url('https://flagcdn.com/w40/gb.png');"></div>
+                        <span id="currentLanguage">English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item" data-lang="en">
+                            <div class="language-flag" style="background-image: url('https://flagcdn.com/w40/gb.png');"></div>
+                            <span>English</span>
+                        </div>
+                        <div class="dropdown-item" data-lang="cn">
+                            <div class="language-flag" style="background-image: url('https://flagcdn.com/w40/cn.png');"></div>
+                            <span>Mandarin</span>
+                        </div>
+                        <div class="dropdown-item" data-lang="fr">
+                            <div class="language-flag" style="background-image: url('https://flagcdn.com/w40/fr.png');"></div>
+                            <span>French</span>
+                        </div>
+                        <div class="dropdown-item" data-lang="sa">
+                            <div class="language-flag" style="background-image: url('https://flagcdn.com/w40/sa.png');"></div>
+                            <span>Arabic</span>
+                        </div>
+                        <div class="dropdown-item" data-lang="de">
+                            <div class="language-flag" style="background-image: url('https://flagcdn.com/w40/de.png');"></div>
+                            <span>German</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                </li>
+               <li>
+                
+               </li>
+            </ul>
+             
+            
+            
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1 data-i18n="intro.header">Discover the Wild Heart of Africa</h1>
+            <p data-i18n="intro.1">Experience breathtaking wildlife, stunning landscapes, and unforgettable adventures on our curated safari tours</p>
+            <a href="#search-section" class="cta-button" data-i18n="intro.2">Explore Tours</a>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search-section" class="search-section">
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search for destinations, tours, or experiences...">
+                <button class="search-btn" id="searchButton">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+            
+            <div class="advanced-filters">
+                <div class="filter-group">
+                    <label class="filter-label">Best Time to Visit</label>
+                    <select class="filter-select" id="bestTimeFilter">
+                        <option value="">Any Time</option>
+                        <option value="Jan-Mar">January - March</option>
+                        <option value="Apr-Jun">April - June</option>
+                        <option value="Jul-Oct">July - October</option>
+                        <option value="Nov-Dec">November - December</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Price Range</label>
+                    <select class="filter-select" id="priceFilter">
+                        <option value="">Any Price</option>
+                        <option value="0-1000">Under $1000</option>
+                        <option value="1000-2000">$1000 - $2000</option>
+                        <option value="2000-3000">$2000 - $3000</option>
+                        <option value="3000">Over $3000</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Duration</label>
+                    <select class="filter-select" id="durationFilter">
+                        <option value="">Any Duration</option>
+                        <option value="1-3">1-3 Days</option>
+                        <option value="4-7">4-7 Days</option>
+                        <option value="8-14">8-14 Days</option>
+                        <option value="14">14+ Days</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Country</label>
+                    <select class="filter-select" id="countryFilter">
+                        <option value="">All Countries</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Tanzania">Tanzania</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="Botswana">Botswana</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="filter-actions">
+                <div class="results-count">Showing <span id="tourCount">0</span> tours</div>
+                <div class="sort-group">
+                    <label class="filter-label">Sort by:</label>
+                    <select class="filter-select" id="sortFilter">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="duration">Duration</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="destinations-section">
+        <div class="container">
+           
+            <div class="tours-grid" id="toursContainer">
+                <!-- Tours will be loaded here from Firebase -->
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <p>Loading safari tours...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Details Modal -->
+    <div class="modal" id="tourModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div class="modal-header">
+                <img id="modalTourImage" src="" alt="Tour Image">
+                <div class="modal-header-content">
+                    <h2 id="modalTourTitle"></h2>
+                    <div class="tour-price" id="modalTourPrice"></div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="tour-info">
+                    <div class="tour-details">
+                        <div class="detail-item">
+                            <i class="fas fa-globe-africa"></i>
+                            <div>
+                                <h4>Country</h4>
+                                <p id="modalTourCountry"></p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <h4>Duration</h4>
+                                <p id="modalTourDuration"></p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-sun"></i>
+                            <div>
+                                <h4>Best Time to Visit</h4>
+                                <p id="modalTourBestTime"></p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-route"></i>
+                            <div>
+                                <h4>Route</h4>
+                                <p id="modalTourRoute"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="itinerary-section">
+                        <h3>Tour Itinerary</h3>
+                        <div id="modalTourItinerary"></div>
+                    </div>
+                </div>
+                
+                <div class="enquire-section">
+                    <h3>Enquire About This Tour</h3>
+                    <form class="enquire-form" id="enquiryForm">
+                        <input type="hidden" id="tourId" name="tourId">
+                        <div class="form-group">
+                            <label for="enquiryName">Full Name</label>
+                            <input type="text" id="enquiryName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="enquiryEmail">Email</label>
+                            <input type="email" id="enquiryEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="enquiryPhone">Phone</label>
+                            <input type="tel" id="enquiryPhone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="enquiryTravelers">Number of Travelers</label>
+                            <select id="enquiryTravelers" name="travelers">
+                                <option value="1">1 Traveler</option>
+                                <option value="2" selected>2 Travelers</option>
+                                <option value="3">3 Travelers</option>
+                                <option value="4">4 Travelers</option>
+                                <option value="5+">5+ Travelers</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="enquiryDates">Preferred Travel Dates</label>
+                            <input type="date" id="enquiryDates" name="dates" placeholder="Select dates or month">
+                        </div>
+                        <div class="form-group">
+                            <label for="enquiryMessage">Special Requests</label>
+                            <textarea id="enquiryMessage" name="message" rows="3"></textarea>
+                        </div>
+                        <div class="form-group" style="display: flex; flex-direction: row; align-items: center; align-content: center;">
+                            <input id="terms" name="terms" type="checkbox" rows="3" style="display: block;" required>
+                            <label style="display: block;">Accept <a>Terms Of Agreement</a></label>
+                            
+                        </div>
+
+                        <button type="submit" class="enquire-btn">Submit Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Milden Adventures</h3>
+                    <p>Experience the majesty of Africa with our expertly crafted safari adventures. We bring you closer to nature's most spectacular displays.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">Destinations</a>
+                    <a href="#">Contacts</a>
+                    <a href="#">About Us</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Destinations</h3>
+                    <a href="#">Kenya Safaris</a>
+                    <a href="#">Tanzania Safaris</a>
+                    <a href="#">South Africa Safaris</a>
+                    <a href="#">Botswana Safaris</a>
+                    <a href="#">Namibia Safaris</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Safari Lane, Nairobi, Kenya</p>
+                    <p><i class="fas fa-phone"></i> +254 724 714640</p>
+                    <p><i class="fas fa-envelope"></i> info@mildenadventures.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Milden adventures. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+    
+    // Toggle between bars and times icon
+    const icon = this.querySelector('i');
+    if (icon.classList.contains('fa-bars')) {
+        icon.classList.replace('fa-bars', 'fa-times');
+    } else {
+        icon.classList.replace('fa-times', 'fa-bars');
+    }
+});
+</script>
+<script>
+    // Set initial language from localStorage or default to 'en'
+    let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    let translations = {};
+
+    // Function to load translation JSON
+    async function loadTranslations(lang) {
+        try {
+            const response = await fetch(`locales/${lang}.json`);
+            if (!response.ok) throw new Error('Language not found');
+            return await response.json();
+        } catch (error) {
+            console.error(`Failed to load ${lang} translations:`, error);
+            // Fallback to English if translation fails
+            if (lang !== 'en') return loadTranslations('en');
+            return {};
+        }
+    }
+
+    // Function to apply translations
+    async function applyTranslations(lang) {
+        try {
+            translations[lang] = await loadTranslations(lang);
+            currentLanguage = lang;
+            localStorage.setItem('selectedLanguage', lang);
+            
+            // Apply translations
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Update language selector
+            document.getElementById('currentLanguage').textContent = 
+                lang === 'en' ? 'English' : 
+                lang === 'cn' ? '中文' : 
+                lang === 'fr' ? 'Français' :
+                lang === 'sa' ? 'العربية' : 'German';
+
+            // Update flag
+            document.getElementById('currentFlag').style.backgroundImage = 
+                lang === 'en' ? "url('https://flagcdn.com/w40/gb.png')" : 
+                lang === 'cn' ? "url('https://flagcdn.com/w40/cn.png')" :
+                lang === 'fr' ? "url('https://flagcdn.com/w40/fr.png')" :
+                lang === 'sa' ? "url('https://flagcdn.com/w40/sa.png')" : 
+                "url('https://flagcdn.com/w40/de.png')";
+                
+        } catch (error) {
+            console.error('Translation error:', error);
+        }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', async function() {
+        // Set initial language
+        await applyTranslations(currentLanguage);
+        
+        // Language dropdown functionality
+        const languageDropdown = document.getElementById('languageDropdown');
+        const dropdownToggle = document.getElementById('dropdownToggle');
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+        
+        // Toggle dropdown visibility
+        dropdownToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            languageDropdown.classList.toggle('active');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!languageDropdown.contains(e.target)) {
+                languageDropdown.classList.remove('active');
+            }
+        });
+        
+        // Handle language selection
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', async function() {
+                const lang = this.getAttribute('data-lang');
+                await applyTranslations(lang);
+                languageDropdown.classList.remove('active');
+            });
+        });
+    });
+</script>
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAJ6xk_LGkp9Ts56NjgTCWYYpHcQB8ikxM",
+            authDomain: "sellers-b52b6.firebaseapp.com",
+            databaseURL: "https://sellers-b52b6-default-rtdb.firebaseio.com",
+            projectId: "sellers-b52b6",
+            storageBucket: "sellers-b52b6.appspot.com",
+            messagingSenderId: "1081196644290",
+            appId: "1:1081196644290:web:5e3a51c16d0635fa26385b",
+            measurementId: "G-2XS9SWXGPS"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
+        // Reference to the tours in the database
+        const toursRef = database.ref('tours');
+        
+        // Global variable to store tours
+        let allTours = [];
+        
+        // DOM elements
+        const tourModal = document.getElementById('tourModal');
+        const closeModal = document.getElementById('closeModal');
+        const enquiryForm = document.getElementById('enquiryForm');
+        
+        // Function to fetch and display tours
+        function loadTours() {
+            toursRef.once('value').then((snapshot) => {
+                const toursData = snapshot.val();
+                const toursContainer = document.getElementById('toursContainer');
+                toursContainer.innerHTML = ''; // Clear loading message
+                
+                if (toursData) {
+                    // Convert object to array
+                    allTours = Object.entries(toursData).map(([key, value]) => ({
+                        id: key,
+                        ...value
+                    }));
+                    
+                    // Render all tours
+                    renderTours(allTours);
+                } else {
+                    toursContainer.innerHTML = '<p class="no-tours">No tours available at the moment. Please check back later.</p>';
+                }
+            }).catch((error) => {
+                console.error("Error loading tours: ", error);
+                document.getElementById('toursContainer').innerHTML = '<p class="error">Failed to load tours. Please try again later.</p>';
+            });
+        }
+        
+        // Function to render tours
+        function renderTours(tours) {
+            const toursContainer = document.getElementById('toursContainer');
+            toursContainer.innerHTML = '';
+            
+            if (tours.length === 0) {
+                toursContainer.innerHTML = '<p class="no-tours">No tours match your search criteria. Please try different filters.</p>';
+                document.getElementById('tourCount').textContent = '0';
+                return;
+            }
+            
+            // Update tour count
+            document.getElementById('tourCount').textContent = tours.length;
+            
+            // Render each tour
+            tours.forEach(tour => {
+                const tourCard = createTourCard(tour);
+                toursContainer.appendChild(tourCard);
+                
+                // Add click event to open modal
+                tourCard.addEventListener('click', () => openTourModal(tour));
+            });
+        }
+        
+        // Function to create a tour card
+        function createTourCard(tour) {
+            const card = document.createElement('div');
+            card.className = 'tour-card';
+            
+            // Use image from Firebase if available
+            const imageUrl = tour.img || `https://source.unsplash.com/random/600x400/?${tour.country.toLowerCase().replace(/\s+/g, '-')},safari`;
+            
+            // Format price
+            const formattedPrice = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 0
+            }).format(tour.price_from);
+            
+            // Create highlights list
+            let highlightsHTML = '';
+            tour.highlights.forEach(highlight => {
+                highlightsHTML += `<li>${highlight}</li>`;
+            });
+            
+            // Create card content
+            card.innerHTML = `
+                <div class="card-image">
+                    <img src="${imageUrl}" alt="${tour.title}" loading="lazy">
+                    <div class="tour-badge">${tour.country}</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="tour-title">${tour.title}</h3>
+                        <div class="tour-price">${formattedPrice}</div>
+                    </div>
+                    <div class="tour-meta">
+                        <span><i class="fas fa-globe-africa"></i> ${tour.country}</span>
+                        <span><i class="fas fa-calendar-alt"></i> ${tour.days} days</span>
+                        <span><i class="fas fa-sun"></i> ${tour.best_time}</span>
+                    </div>
+                    <p class="tour-route"><strong>Route:</strong> ${tour.route}</p>
+                    <div class="tour-highlights">
+                        <ul>${highlightsHTML}</ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="cta-button view-details">View Details</a>
+                        <a href="#" class="cta-button">Book Now</a>
+                    </div>
+                </div>
+            `;
+            
+            return card;
+        }
+        
+        // Function to open tour modal
+        function openTourModal(tour) {
+            // Populate modal with tour data
+            document.getElementById('modalTourImage').src = tour.img || `https://source.unsplash.com/random/800x600/?${tour.country.toLowerCase().replace(/\s+/g, '-')},safari`;
+            document.getElementById('modalTourTitle').textContent = tour.title;
+            
+            // Format price
+            const formattedPrice = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 0
+            }).format(tour.price_from);
+            document.getElementById('modalTourPrice').textContent = `From ${formattedPrice}`;
+            
+            document.getElementById('modalTourCountry').textContent = tour.country;
+            document.getElementById('modalTourDuration').textContent = `${tour.days} Days`;
+            document.getElementById('modalTourBestTime').textContent = tour.best_time;
+            document.getElementById('modalTourRoute').textContent = tour.route;
+            
+            // Populate itinerary
+            const itineraryContainer = document.getElementById('modalTourItinerary');
+            itineraryContainer.innerHTML = '';
+            
+            for (const [day, description] of Object.entries(tour.itinerary)) {
+                const dayItem = document.createElement('div');
+                dayItem.className = 'itinerary-item';
+                dayItem.innerHTML = `
+                    <div class="itinerary-day">${day.replace(/_/g, ' ').toUpperCase()}</div>
+                    <p>${description}</p>
+                `;
+                itineraryContainer.appendChild(dayItem);
+            }
+            
+            // Set tour ID in form
+            document.getElementById('tourId').value = tour.id;
+            
+            // Show modal
+            tourModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Function to close modal
+        function closeTourModal() {
+            tourModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Filter tours based on criteria
+        function filterTours() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const bestTime = document.getElementById('bestTimeFilter').value;
+            const priceRange = document.getElementById('priceFilter').value;
+            const duration = document.getElementById('durationFilter').value;
+            const country = document.getElementById('countryFilter').value;
+            const sortBy = document.getElementById('sortFilter').value;
+            
+            let filteredTours = [...allTours];
+            
+            // Apply text search
+            if (searchTerm) {
+                filteredTours = filteredTours.filter(tour => 
+                    tour.title.toLowerCase().includes(searchTerm) ||
+                    tour.country.toLowerCase().includes(searchTerm) ||
+                    tour.route.toLowerCase().includes(searchTerm) ||
+                    tour.highlights.some(h => h.toLowerCase().includes(searchTerm))
+                );
+            }
+            
+            // Apply best time filter
+            if (bestTime) {
+                filteredTours = filteredTours.filter(tour => tour.best_time.includes(bestTime));
+            }
+            
+            // Apply price filter
+            if (priceRange) {
+                const [min, max] = priceRange.split('-').map(Number);
+                
+                filteredTours = filteredTours.filter(tour => {
+                    if (priceRange === "3000") {
+                        return tour.price_from >= 3000;
+                    } else if (max) {
+                        return tour.price_from >= min && tour.price_from <= max;
+                    } else {
+                        return tour.price_from <= min;
+                    }
+                });
+            }
+            
+            // Apply duration filter
+            if (duration) {
+                const [min, max] = duration.split('-').map(Number);
+                
+                filteredTours = filteredTours.filter(tour => {
+                    if (duration === "14") {
+                        return tour.days >= 14;
+                    } else if (max) {
+                        return tour.days >= min && tour.days <= max;
+                    } else {
+                        return tour.days <= min;
+                    }
+                });
+            }
+            
+            // Apply country filter
+            if (country) {
+                filteredTours = filteredTours.filter(tour => tour.country === country);
+            }
+            
+            // Apply sorting
+            if (sortBy === "price-low") {
+                filteredTours.sort((a, b) => a.price_from - b.price_from);
+            } else if (sortBy === "price-high") {
+                filteredTours.sort((a, b) => b.price_from - a.price_from);
+            } else if (sortBy === "duration") {
+                filteredTours.sort((a, b) => a.days - b.days);
+            }
+            
+            // Render filtered tours
+            renderTours(filteredTours);
+        }
+        
+        // Initialize search functionality
+        function initSearch() {
+            document.getElementById('searchButton').addEventListener('click', filterTours);
+            document.getElementById('searchInput').addEventListener('keyup', (e) => {
+                if (e.key === 'Enter') filterTours();
+            });
+            
+            const filterElements = [
+                'bestTimeFilter', 
+                'priceFilter', 
+                'durationFilter', 
+                'countryFilter',
+                'sortFilter'
+            ];
+            
+            filterElements.forEach(id => {
+                document.getElementById(id).addEventListener('change', filterTours);
+            });
+        }
+        
+        // Handle enquiry form submission
+        function handleEnquiryForm(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const tourId = document.getElementById('tourId').value;
+            const name = document.getElementById('enquiryName').value;
+            const email = document.getElementById('enquiryEmail').value;
+            const phone = document.getElementById('enquiryPhone').value;
+            const travelers = document.getElementById('enquiryTravelers').value;
+            const dates = document.getElementById('enquiryDates').value;
+            const message = document.getElementById('enquiryMessage').value;
+            
+            // Get tour title for confirmation
+            const tourTitle = document.getElementById('modalTourTitle').textContent;
+            
+            // In a real application, you would send this data to your server
+            // For this example, we'll just show a confirmation message
+            alert(`Thank you, ${name}!\n\nYour enquiry for "${tourTitle}" has been submitted.\n\nWe'll contact you at ${email} shortly to discuss your safari adventure.`);
+            
+            // Reset form
+            enquiryForm.reset();
+            
+            // Close modal
+            closeTourModal();
+        }
+
+        // Load tours and initialize functionality when the page is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            loadTours();
+            initSearch();
+            
+            // Set up modal close functionality
+            closeModal.addEventListener('click', closeTourModal);
+            window.addEventListener('click', (e) => {
+                if (e.target === tourModal) {
+                    closeTourModal();
+                }
+            });
+            
+            // Set up form submission
+            enquiryForm.addEventListener('submit', handleEnquiryForm);
+        });
+    </script>
+</body>
+</html>
