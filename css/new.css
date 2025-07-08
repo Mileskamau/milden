@@ -1,0 +1,218 @@
+
+      .container90 {
+    max-width: 1200px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+
+.top-popup90 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+        .left-section {
+            flex: 1;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/booking.jpeg');
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .left-section h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #fdbb2d;
+        }
+        
+        .left-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .benefits {
+            list-style: none;
+            margin-top: 30px;
+        }
+        
+        .benefits li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+        
+        .benefits i {
+            color: #fdbb2d;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        
+        .right-section {
+            flex: 1;
+            padding: 40px;
+        }
+        
+        .form-header30 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .form-header30 h2 {
+            font-size: 2.2rem;
+            color: #1a2a6c;
+            margin-bottom: 10px;
+        }
+        
+        .form-header30 p {
+            color: #666;
+        }
+        
+        .form-container30 {
+            width: 100%;
+        }
+        
+        .form-group30 {
+            margin-bottom: 25px;
+        }
+        
+        .form-group30 label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-group30 input,
+        .form-group30 select,
+        .form-group30 textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group30 input:focus,
+        .form-group30 select:focus,
+        .form-group30 textarea:focus {
+            border-color: #1a2a6c;
+            outline: none;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .form-row .form-group30 {
+            flex: 1;
+        }
+        
+        .btn355 {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(to right, #1a2a6c, #b21f1f);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn355:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .counter {
+            display: flex;
+            align-items: center;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .counter button {
+            width: 40px;
+            height: 40px;
+            background: #f5f5f5;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        
+        .counter input {
+            flex: 1;
+            border: none;
+            text-align: center;
+            padding: 0;
+        }
+        
+        .travelers {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .traveler-type {
+            flex: 1;
+        }
+        
+        @media (max-width: 900px) {
+            .container90 {
+                flex-direction: column;
+            }
+            
+            .left-section {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .form-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        
+        .required::after {
+            content: " *";
+            color: #e74c3c;
+        }
+         .close-btn2{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #888;
+            background: none;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .close-btn2:hover {
+            transform: rotate(100deg);
+            color: #ff0000;
+            background: #f9f9f9;
+        }
+    
